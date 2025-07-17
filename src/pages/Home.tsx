@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Terminal from '../components/Terminal';
-import { useTheme } from '../context/ThemeContext';
 
 const Home = () => {
-  const { isDarkMode } = useTheme();
   const [displayText, setDisplayText] = useState('');
   const [showCursor, setShowCursor] = useState(true);
 
@@ -44,21 +42,31 @@ Type 'help' for navigation or explore using the menu above.`;
   }, []);
 
   return (
-    <div className={`min-h-screen pt-20 ${isDarkMode ? 'bg-black text-green-400' : 'bg-gray-50 text-purple-600'
-      }`}>
-      <div className="max-w-6xl mx-auto px-4 py-8">
-        <div className="text-center mb-12">
-          <div className="inline-block">
-            <h1 className={`text-6xl font-mono font-bold mb-4 wireframe-heading ${isDarkMode ? 'text-green-400' : 'text-purple-600'
-              }`}>
+    <div className="min-h-screen pt-40 bg-black text-green-400">
+      <div className="max-w-6xl mx-auto px-4 py-">
+        <div className="text-center mb-12 ">
+          <div className="inline-block ">
+            <h1 className="text-8xl font-mono font-bold wireframe-heading text-green-400 ">
               RAAGHAV BATRA
             </h1>
-            <div className={`text-2xl font-mono mb-8 wireframe-subheading ${isDarkMode ? 'text-green-300' : 'text-purple-500'
-              }`}>
+            <div className="text-4xl font-mono mb-3 wireframe-subheading text-green-300">
               MECHATRONICS ENGINEER
             </div>
+            <div className="mb-4">
+              <span className="font-mono text-xl text-green-400">
+                Glad to have you here — explore my portfolio!
+              </span>
+            </div>
+            <a
+              href="/Raaghav_Batra_CV.pdf"
+              download
+              className="mt-2 inline-block border-2 border-green-400 bg-green-400 text-black font-mono px-6 py-2 transition-all duration-200 wireframe-button flashing-hover"
+            >
+              Download CV
+            </a>
           </div>
         </div>
+
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           <div className="lg:col-span-2">
@@ -97,14 +105,6 @@ Type 'help' for navigation or explore using the menu above.`;
                 <div>Last Boot: {new Date().toLocaleDateString()}</div>
               </div>
             </Terminal>
-          </div>
-        </div>
-
-        <div className="mt-12 text-center">
-          <div className="inline-block border-2 border-green-400 px-6 py-3">
-            <div className="font-mono text-sm text-green-300">
-              💡 Pro tip: Use the navigation menu above to explore my work
-            </div>
           </div>
         </div>
       </div>

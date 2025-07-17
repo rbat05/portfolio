@@ -1,18 +1,14 @@
-import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import Terminal from '../../components/Terminal';
-import { useTheme } from '../../context/ThemeContext';
 import projectsData from '../../data/projects.json';
 
 const ProjectDetail = () => {
-  const { isDarkMode } = useTheme();
   const { id } = useParams();
   const project = projectsData.projects.find(p => p.id === id);
 
   if (!project) {
     return (
-      <div className={`min-h-screen pt-20 ${isDarkMode ? 'bg-black text-green-400' : 'bg-gray-50 text-purple-600'
-        }`}>
+      <div className="min-h-screen pt-20 bg-black text-green-400">
         <div className="max-w-6xl mx-auto px-4 py-8">
           <Terminal title="ERROR.LOG">
             <div className="text-center">
@@ -32,16 +28,12 @@ const ProjectDetail = () => {
   const statusIcon = project.status === 'Complete' ? '✅' : '⏳';
 
   return (
-    <div className={`min-h-screen pt-20 ${isDarkMode ? 'bg-black text-green-400' : 'bg-gray-50 text-purple-600'
-      }`}>
+    <div className="min-h-screen pt-20 bg-black text-green-400">
       <div className="max-w-6xl mx-auto px-4 py-8">
         <div className="mb-8">
           <Link
             to="/projects"
-            className={`font-mono text-sm ${isDarkMode
-                ? 'text-green-300 hover:text-green-400'
-                : 'text-purple-500 hover:text-purple-600'
-              }`}
+            className="font-mono text-sm text-green-300 hover:text-green-400"
           >
             &lt; Back to Projects
           </Link>
@@ -49,12 +41,10 @@ const ProjectDetail = () => {
 
         <div className="text-center mb-12">
           <div className="text-6xl mb-4">{project.thumbnail}</div>
-          <h1 className={`text-4xl font-mono font-bold mb-4 wireframe-heading ${isDarkMode ? 'text-green-400' : 'text-purple-600'
-            }`}>
+          <h1 className="text-4xl font-mono font-bold mb-4 wireframe-heading text-green-400">
             {project.title}
           </h1>
-          <div className={`font-mono mb-4 ${isDarkMode ? 'text-green-300' : 'text-purple-500'
-            }`}>
+          <div className="font-mono mb-4 text-green-300">
             {project.tagline}
           </div>
           <div className={`font-mono text-sm ${statusColor}`}>

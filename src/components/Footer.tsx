@@ -1,9 +1,9 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Footer = () => {
+  // No dark mode switching, only static dark styling
   return (
-    <footer className="bg-black border-t-2 border-green-400 text-green-400 font-mono mt-16 wireframe-footer">
+    <footer className="bg-black border-t border-green-400 text-green-400 font-mono mt-16 wireframe-footer">
       <div className="max-w-6xl mx-auto px-4 py-8">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div>
@@ -24,7 +24,7 @@ const Footer = () => {
             </div>
           </div>
 
-          <div>
+          <div className="ml-40">
             <h3 className="text-lg mb-4"> HOSTING INFO</h3>
             <a
               href="https://github.com/yourusername/portfolio"

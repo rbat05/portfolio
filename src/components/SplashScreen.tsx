@@ -2,10 +2,9 @@ import React, { useState, useEffect } from 'react';
 
 interface SplashScreenProps {
   onComplete: () => void;
-  isDarkMode?: boolean;
 }
 
-const SplashScreen: React.FC<SplashScreenProps> = ({ onComplete, isDarkMode = true }) => {
+const SplashScreen: React.FC<SplashScreenProps> = ({ onComplete }) => {
   const [currentStep, setCurrentStep] = useState(0);
   const [displayText, setDisplayText] = useState('');
   const [showASCII, setShowASCII] = useState(false);
@@ -18,13 +17,14 @@ const SplashScreen: React.FC<SplashScreenProps> = ({ onComplete, isDarkMode = tr
   ];
 
   const asciiArt = `
-  ██████╗ ██████╗ ██████╗ ████████╗███████╗ ██████╗ ██╗     ██╗ ██████╗ 
-  ██╔══██╗██╔══██╗██╔══██╗╚══██╔══╝██╔════╝██╔═══██╗██║     ██║██╔═══██╗
-  ██████╔╝██║  ██║██████╔╝   ██║   █████╗  ██║   ██║██║     ██║██║   ██║
-  ██╔═══╝ ██║  ██║██╔══██╗   ██║   ██╔══╝  ██║   ██║██║     ██║██║   ██║
-  ██║     ██████╔╝██║  ██║   ██║   ██║     ╚██████╔╝███████╗██║╚██████╔╝
-  ╚═╝     ╚═════╝ ╚═╝  ╚═╝   ╚═╝   ╚═╝      ╚═════╝ ╚══════╝╚═╝ ╚═════╝ 
-  `;
+........................................................................
+.%%%%%....%%%%...%%%%%...%%%%%%..%%%%%%...%%%%...%%......%%%%%%...%%%%..
+.%%..%%..%%..%%..%%..%%....%%....%%......%%..%%..%%........%%....%%..%%.
+.%%%%%...%%..%%..%%%%%.....%%....%%%%....%%..%%..%%........%%....%%..%%.
+.%%......%%..%%..%%..%%....%%....%%......%%..%%..%%........%%....%%..%%.
+.%%.......%%%%...%%..%%....%%....%%.......%%%%...%%%%%%..%%%%%%...%%%%..
+........................................................................
+`;
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -55,14 +55,13 @@ const SplashScreen: React.FC<SplashScreenProps> = ({ onComplete, isDarkMode = tr
       } else {
         clearInterval(interval);
         setDisplayText(prev => prev + '\n');
-        setTimeout(callback, 300);
+        setTimeout(callback, 100);
       }
-    }, 50);
+    }, 15);
   };
 
   return (
-    <div className={`fixed inset-0 font-mono flex items-center justify-center z-50 ${isDarkMode ? 'bg-black text-green-400' : 'bg-gray-50 text-purple-600'
-      }`}>
+    <div className="fixed inset-0 font-mono flex items-center justify-center z-50 bg-black text-green-400">
       <div className="max-w-4xl w-full p-8">
         <div className="mb-8">
           <pre className="text-sm leading-relaxed whitespace-pre-wrap">

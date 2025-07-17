@@ -1,22 +1,17 @@
 import React from 'react';
 import ProjectCard from '../components/ProjectCard.tsx';
-import { useTheme } from '../context/ThemeContext';
 import projectsData from '../data/projects.json';
 
 const Projects = () => {
-  const { isDarkMode } = useTheme();
 
   return (
-    <div className={`min-h-screen pt-20 ${isDarkMode ? 'bg-black text-green-400' : 'bg-gray-50 text-purple-600'
-      }`}>
+    <div className="min-h-screen pt-20 bg-black text-green-400">
       <div className="max-w-6xl mx-auto px-4 py-8">
         <div className="text-center mb-12">
-          <h1 className={`text-4xl font-mono font-bold mb-4 wireframe-heading ${isDarkMode ? 'text-green-400' : 'text-purple-600'
-            }`}>
+          <h1 className="text-4xl font-mono font-bold mb-4 wireframe-heading text-green-400">
             PROJECTS_DIRECTORY.EXE
           </h1>
-          <div className={`font-mono ${isDarkMode ? 'text-green-300' : 'text-purple-500'
-            }`}>
+          <div className="font-mono text-green-300">
             Explore my technical projects and creations
           </div>
         </div>

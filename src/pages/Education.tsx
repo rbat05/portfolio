@@ -1,23 +1,18 @@
 import React, { useState } from 'react';
 import Terminal from '../components/Terminal';
-import { useTheme } from '../context/ThemeContext';
 import educationData from '../data/education.json';
 
 const Education = () => {
-  const { isDarkMode } = useTheme();
   const [showEnrollments, setShowEnrollments] = useState(false);
 
   return (
-    <div className={`min-h-screen pt-20 ${isDarkMode ? 'bg-black text-green-400' : 'bg-gray-50 text-purple-600'
-      }`}>
+    <div className="min-h-screen pt-20 bg-black text-green-400">
       <div className="max-w-6xl mx-auto px-4 py-8">
         <div className="text-center mb-12">
-          <h1 className={`text-4xl font-mono font-bold mb-4 wireframe-heading ${isDarkMode ? 'text-green-400' : 'text-purple-600'
-            }`}>
+          <h1 className="text-4xl font-mono font-bold mb-4 wireframe-heading text-green-400">
             EDUCATION_MODULE.EXE
           </h1>
-          <div className={`font-mono ${isDarkMode ? 'text-green-300' : 'text-purple-500'
-            }`}>
+          <div className="font-mono text-green-300">
             Academic achievements and learning journey
           </div>
         </div>

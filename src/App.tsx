@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { ThemeProvider, useTheme } from './context/ThemeContext';
+// import { ThemeProvider, useTheme } from './context/ThemeContext';
 import Navbar from './components/Navbar.tsx';
 import Footer from './components/Footer.tsx';
 import SplashScreen from './components/SplashScreen.tsx';
@@ -11,7 +11,7 @@ import Contact from './pages/Contact.tsx';
 import ProjectDetail from './pages/projects/ProjectDetail.tsx';
 
 function AppContent() {
-  const { isDarkMode, toggleTheme } = useTheme();
+  // const { isDarkMode, toggleTheme } = useTheme();
   const [showSplash, setShowSplash] = useState(true);
   const [hasVisited, setHasVisited] = useState(false);
 
@@ -37,20 +37,20 @@ function AppContent() {
       position: fixed;
       top: 0;
       left: 0;
-      width: 20px;
-      height: 20px;
-      background: rgba(0, 255, 0, 0.5);
+      width: 10px;
+      height: 10px;
+      background: rgba(0, 0, 0, 0.5);
       border: 2px solid #00ff00;
       border-radius: 50%;
       pointer-events: none;
       z-index: 9999;
-      transition: all 0.1s ease;
+      transition: all 0.025s ease;
     `;
     document.body.appendChild(cursor);
 
     const moveCursor = (e: MouseEvent) => {
-      cursor.style.left = `${e.clientX - 10}px`;
-      cursor.style.top = `${e.clientY - 10}px`;
+      cursor.style.left = `${e.clientX - 3}px`;
+      cursor.style.top = `${e.clientY}px`;
     };
 
     document.addEventListener('mousemove', moveCursor);
@@ -64,15 +64,12 @@ function AppContent() {
   }, []);
 
   if (showSplash && !hasVisited) {
-    return <SplashScreen onComplete={handleSplashComplete} isDarkMode={isDarkMode} />;
+    return <SplashScreen onComplete={handleSplashComplete} />;
   }
 
   return (
-    <div className={`min-h-screen font-mono transition-colors duration-300 ${isDarkMode
-      ? 'bg-black text-green-400'
-      : 'bg-gray-50 text-purple-600'
-      }`}>
-      <Navbar isDarkMode={isDarkMode} toggleTheme={toggleTheme} />
+    <div className="min-h-screen font-mono bg-black text-green-400">
+      <Navbar />
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -89,11 +86,9 @@ function AppContent() {
 
 function App() {
   return (
-    <ThemeProvider>
-      <Router>
-        <AppContent />
-      </Router>
-    </ThemeProvider>
+    <Router>
+      <AppContent />
+    </Router>
   );
 }
 

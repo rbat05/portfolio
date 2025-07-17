@@ -1,0 +1,40 @@
+{
+  "university": "University of Engineering",
+  "degree": "Bachelor of Science in Computer Engineering",
+  "gpa": "3.85",
+  "semesterGPA": [
+    { "semester": "Fall 2023", "gpa": "3.8" },
+    { "semester": "Spring 2024", "gpa": "3.9" }
+  ],
+  "currentCourses": [
+    "Advanced Algorithms",
+    "Computer Networks",
+    "Database Systems",
+    "Software Engineering"
+  ],
+  "pastCourses": [
+    "Data Structures",
+    "Operating Systems",
+    "Computer Architecture",
+    "Discrete Mathematics",
+    "Programming Languages",
+    "Web Development"
+  ],
+  "achievements": [
+    {
+      "title": "Dean's List",
+      "description": "Fall 2023, Spring 2024",
+      "icon": "🏆"
+    },
+    {
+      "title": "Hackathon Winner",
+      "description": "First place in university coding competition",
+      "icon": "👑"
+    },
+    {
+      "title": "Academic Excellence",
+      "description": "Top 10% of graduating class",
+      "icon": "⭐"
+    }
+  ]
+}

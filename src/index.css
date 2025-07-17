@@ -1,0 +1,321 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  cursor: none !important;
+}
+
+body {
+  font-family: 'VT323', monospace;
+  overflow-x: hidden;
+}
+
+/* 3D Wireframe Effects */
+.wireframe-terminal {
+  position: relative;
+  transform-style: preserve-3d;
+  box-shadow:
+    0 0 0 2px currentColor,
+    8px 8px 0 0 rgba(0, 255, 0, 0.3),
+    16px 16px 0 0 rgba(0, 255, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.wireframe-terminal:hover {
+  transform: translateZ(10px);
+  box-shadow:
+    0 0 0 2px currentColor,
+    12px 12px 0 0 rgba(0, 255, 0, 0.4),
+    24px 24px 0 0 rgba(0, 255, 0, 0.2);
+}
+
+/* Light mode wireframe */
+body:not(.dark) .wireframe-terminal {
+  box-shadow:
+    0 0 0 2px currentColor,
+    8px 8px 0 0 rgba(147, 51, 234, 0.3),
+    16px 16px 0 0 rgba(147, 51, 234, 0.1);
+}
+
+body:not(.dark) .wireframe-terminal:hover {
+  box-shadow:
+    0 0 0 2px currentColor,
+    12px 12px 0 0 rgba(147, 51, 234, 0.4),
+    24px 24px 0 0 rgba(147, 51, 234, 0.2);
+}
+
+/* Wireframe headings - outline only */
+.wireframe-heading {
+  -webkit-text-stroke: 2px currentColor;
+  -webkit-text-fill-color: transparent;
+  text-shadow:
+    2px 2px 0 rgba(0, 255, 0, 0.3),
+    4px 4px 0 rgba(0, 255, 0, 0.2),
+    6px 6px 0 rgba(0, 255, 0, 0.1);
+  filter: drop-shadow(0 0 10px currentColor);
+}
+
+body:not(.dark) .wireframe-heading {
+  text-shadow:
+    2px 2px 0 rgba(147, 51, 234, 0.3),
+    4px 4px 0 rgba(147, 51, 234, 0.2),
+    6px 6px 0 rgba(147, 51, 234, 0.1);
+}
+
+.wireframe-subheading {
+  -webkit-text-stroke: 1px currentColor;
+  -webkit-text-fill-color: transparent;
+  text-shadow:
+    1px 1px 0 rgba(0, 255, 0, 0.3),
+    2px 2px 0 rgba(0, 255, 0, 0.2);
+}
+
+body:not(.dark) .wireframe-subheading {
+  text-shadow:
+    1px 1px 0 rgba(147, 51, 234, 0.3),
+    2px 2px 0 rgba(147, 51, 234, 0.2);
+}
+
+/* Wireframe buttons */
+.wireframe-button {
+  position: relative;
+  transform-style: preserve-3d;
+  box-shadow:
+    0 0 0 2px currentColor,
+    4px 4px 0 0 rgba(0, 255, 0, 0.3);
+  transition: all 0.2s ease;
+}
+
+.wireframe-button:hover {
+  transform: translateZ(5px);
+  box-shadow:
+    0 0 0 2px currentColor,
+    6px 6px 0 0 rgba(0, 255, 0, 0.4);
+}
+
+body:not(.dark) .wireframe-button {
+  box-shadow:
+    0 0 0 2px currentColor,
+    4px 4px 0 0 rgba(147, 51, 234, 0.3);
+}
+
+body:not(.dark) .wireframe-button:hover {
+  box-shadow:
+    0 0 0 2px currentColor,
+    6px 6px 0 0 rgba(147, 51, 234, 0.4);
+}
+
+/* Wireframe cards */
+.wireframe-card {
+  position: relative;
+  transform-style: preserve-3d;
+  box-shadow:
+    0 0 0 2px currentColor,
+    6px 6px 0 0 rgba(0, 255, 0, 0.3),
+    12px 12px 0 0 rgba(0, 255, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.wireframe-card:hover {
+  transform: translateZ(8px);
+  box-shadow:
+    0 0 0 2px currentColor,
+    10px 10px 0 0 rgba(0, 255, 0, 0.4),
+    20px 20px 0 0 rgba(0, 255, 0, 0.2);
+}
+
+body:not(.dark) .wireframe-card {
+  box-shadow:
+    0 0 0 2px currentColor,
+    6px 6px 0 0 rgba(147, 51, 234, 0.3),
+    12px 12px 0 0 rgba(147, 51, 234, 0.1);
+}
+
+body:not(.dark) .wireframe-card:hover {
+  box-shadow:
+    0 0 0 2px currentColor,
+    10px 10px 0 0 rgba(147, 51, 234, 0.4),
+    20px 20px 0 0 rgba(147, 51, 234, 0.2);
+}
+
+/* Wireframe navigation */
+.wireframe-nav {
+  position: relative;
+  box-shadow:
+    0 0 0 2px currentColor,
+    0 4px 0 0 rgba(0, 255, 0, 0.3);
+}
+
+body:not(.dark) .wireframe-nav {
+  box-shadow:
+    0 0 0 2px currentColor,
+    0 4px 0 0 rgba(147, 51, 234, 0.3);
+}
+
+/* Wireframe footer */
+.wireframe-footer {
+  position: relative;
+  box-shadow:
+    0 0 0 2px currentColor,
+    0 -4px 0 0 rgba(0, 255, 0, 0.3);
+}
+
+/* Grid pattern background for wireframe effect */
+.wireframe-terminal::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image:
+    linear-gradient(rgba(0, 255, 0, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 255, 0, 0.1) 1px, transparent 1px);
+  background-size: 20px 20px;
+  pointer-events: none;
+  opacity: 0.3;
+}
+
+body:not(.dark) .wireframe-terminal::before {
+  background-image:
+    linear-gradient(rgba(147, 51, 234, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(147, 51, 234, 0.1) 1px, transparent 1px);
+}
+
+/* Light mode styles */
+body:not(.dark) {
+  background-color: #f9fafb;
+  color: #9333ea;
+}
+
+body:not(.dark) ::-webkit-scrollbar-track {
+  background: #f9fafb;
+  border: 1px solid #9333ea;
+}
+
+body:not(.dark) ::-webkit-scrollbar-thumb {
+  background: #9333ea;
+  border: 1px solid #f9fafb;
+}
+
+body:not(.dark) ::-webkit-scrollbar-thumb:hover {
+  background: #7c3aed;
+}
+
+/* Custom animations */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.5s ease-in-out;
+}
+
+/* Glowing text effect */
+.text-glow {
+  text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00;
+}
+
+/* Terminal scanlines effect */
+.terminal-scanlines::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(transparent 50%, rgba(0, 255, 0, 0.03) 50%);
+  background-size: 100% 4px;
+  pointer-events: none;
+}
+
+/* Blinking cursor animation */
+@keyframes blink {
+
+  0%,
+  50% {
+    opacity: 1;
+  }
+
+  51%,
+  100% {
+    opacity: 0;
+  }
+}
+
+.blink {
+  animation: blink 1s infinite;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000000;
+  border: 1px solid #00ff00;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #00ff00;
+  border: 1px solid #000000;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #00cc00;
+}
+
+/* Retro button hover effects */
+.retro-button {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.retro-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(0, 255, 0, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.retro-button:hover::before {
+  left: 100%;
+}
+
+/* Matrix-style background pattern */
+.matrix-bg {
+  background-image:
+    radial-gradient(circle at 1px 1px, rgba(0, 255, 0, 0.1) 1px, transparent 0);
+  background-size: 20px 20px;
+}
+
+/* Responsive font sizes */
+@media (max-width: 768px) {
+  .text-6xl {
+    font-size: 3rem;
+  }
+
+  .text-4xl {
+    font-size: 2rem;
+  }
+
+  .text-2xl {
+    font-size: 1.5rem;
+  }
+}

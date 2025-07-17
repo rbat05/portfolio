@@ -1,0 +1,52 @@
+{
+  "projects": [
+    {
+      "id": "project-1",
+      "title": "Terminal Chat App",
+      "description": "Real-time messaging app with retro terminal interface",
+      "status": "Complete",
+      "tech": ["React", "Node.js", "Socket.io"],
+      "thumbnail": "🖥️",
+      "term": "Spring 2024",
+      "tagline": "Bringing back the golden age of terminal communication",
+      "background": "Inspired by early BBS systems and IRC clients, this project recreates the nostalgic experience of terminal-based communication with modern real-time capabilities.",
+      "approach": "Built using React for the frontend terminal interface, Node.js backend with Socket.io for real-time messaging, and implemented custom ASCII art rendering.",
+      "challenges": "Creating an authentic terminal feel while maintaining modern usability, implementing proper message threading, and ensuring cross-browser compatibility.",
+      "outcome": "Successfully deployed application with 100+ active users during demo period. Received positive feedback for authentic retro aesthetic.",
+      "github": "https://github.com/yourusername/terminal-chat",
+      "demo": "https://yourdemo.com/terminal-chat",
+      "youtube": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+    },
+    {
+      "id": "project-2",
+      "title": "ASCII Art Generator",
+      "description": "Convert images to ASCII art with customizable parameters",
+      "status": "Complete",
+      "tech": ["Python", "PIL", "Flask"],
+      "thumbnail": "🎨",
+      "term": "Fall 2023",
+      "tagline": "Transforming digital images into retro text art",
+      "background": "ASCII art has been a cornerstone of early computer graphics. This tool modernizes the conversion process while maintaining the charm of text-based imagery.",
+      "approach": "Implemented image processing algorithms using Python PIL, created web interface with Flask, and optimized for various ASCII character sets.",
+      "challenges": "Balancing detail preservation with ASCII limitations, optimizing processing speed for large images, and creating an intuitive user interface.",
+      "outcome": "Generated over 1000 ASCII artworks, integrated into multiple retro-themed projects, and featured in university tech showcase.",
+      "github": "https://github.com/yourusername/ascii-generator",
+      "demo": "https://yourdemo.com/ascii-generator"
+    },
+    {
+      "id": "project-3",
+      "title": "Retro Game Engine",
+      "description": "2D game engine with pixel-perfect rendering",
+      "status": "In Progress",
+      "tech": ["C++", "OpenGL", "SDL2"],
+      "thumbnail": "🎮",
+      "term": "Spring 2024",
+      "tagline": "Building tomorrow's retro games today",
+      "background": "Modern game engines often overcomplicate simple 2D game development. This engine focuses on pixel-perfect rendering and authentic retro game feel.",
+      "approach": "Developed in C++ using OpenGL for rendering and SDL2 for input handling. Implemented sprite batching, tile-based collision, and retro-style audio.",
+      "challenges": "Achieving pixel-perfect rendering across different screen resolutions, implementing efficient sprite batching, and maintaining 60fps performance.",
+      "outcome": "Currently in development with basic rendering and physics systems complete. Planning to release demo games showcasing engine capabilities.",
+      "github": "https://github.com/yourusername/retro-engine"
+    }
+  ]
+}

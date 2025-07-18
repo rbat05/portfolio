@@ -32,10 +32,13 @@ export default function AnimatedBackground() {
     containerRef.current.appendChild(renderer.domElement);
 
     // VHS wireframe grid parameters
-    const gridRows = 18;
+    // VHS wireframe grid parameters
+    const gridRows = 32;
     const gridCols = 32;
-    const gridWidth = window.innerWidth / 30; // scale to screen width
-    const gridHeight = window.innerHeight / 30; // scale to screen height
+    // Calculate cell size so grid cells are square
+    const cellSize = Math.max(window.innerWidth / (gridCols * 14), window.innerHeight / (gridRows * 14));
+    const gridWidth = cellSize * gridCols;
+    const gridHeight = cellSize * gridRows;
     const lineMaterial = new THREE.LineBasicMaterial({ color: 0x000000, transparent: true, opacity: 0.25 });
     const lines: THREE.Line[] = [];
 

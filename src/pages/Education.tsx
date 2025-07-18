@@ -80,26 +80,24 @@ const Education = () => {
 
             <Terminal title="COURSE_VIEWER">
               <div className="space-y-4">
+                <div>
+                  <h3 className="text-white font-bold mb-2">Current Courses:</h3>
+                  <ul className="space-y-1">
+                    {educationData.currentCourses.map((course, index) => (
+                      <li key={index} className="text-sm">
+                        {course}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
                 <button
                   onClick={() => setShowEnrollments(!showEnrollments)}
                   className="w-full px-4 py-2 border-2 border-white bg-black text-white hover:bg-white hover:text-black transition-all duration-200 font-mono"
                 >
-                  {showEnrollments ? 'Hide' : 'Show'} Enrollments
+                  {showEnrollments ? 'Hide' : 'Show'} Past Enrollments
                 </button>
-
                 {showEnrollments && (
                   <div className="space-y-4 animate-fade-in">
-                    <div>
-                      <h3 className="text-white font-bold mb-2">Current Courses:</h3>
-                      <ul className="space-y-1">
-                        {educationData.currentCourses.map((course, index) => (
-                          <li key={index} className="text-sm">
-                            {course}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-
                     <div>
                       <h3 className="text-white font-bold mb-2">Past Courses:</h3>
                       <ul className="space-y-1">

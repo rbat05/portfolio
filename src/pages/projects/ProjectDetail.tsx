@@ -28,17 +28,8 @@ const ProjectDetail = () => {
   const statusIcon = project.status === 'Complete' ? '✅' : '⏳';
 
   return (
-    <div className="min-h-screen pt-20 bg-black text-white">
-      <div className="max-w-6xl mx-auto px-4 py-8">
-        <div className="mb-8">
-          <Link
-            to="/projects"
-            className="font-mono text-sm text-white hover:text-white"
-          >
-            &lt; Back to Projects
-          </Link>
-        </div>
-
+    <div className="min-h-screen bg-black text-white">
+      <div className="max-w-6xl mx-auto px-4 py-16">
         <div className="text-center mb-12">
           <div className="text-6xl mb-4">{project.thumbnail}</div>
           <h1 className="text-4xl font-mono font-bold mb-4 wireframe-heading text-white">

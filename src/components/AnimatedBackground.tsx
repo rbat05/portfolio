@@ -15,7 +15,7 @@ export default function AnimatedBackground() {
     // Setup camera
     const camera = new THREE.PerspectiveCamera(
       75,
-      window.innerWidth / window.innerHeight,
+      window.innerWidth / document.documentElement.clientHeight,
       0.1,
       1000
     );
@@ -27,7 +27,7 @@ export default function AnimatedBackground() {
       alpha: true
     });
     renderer.setClearColor(0xffffff, 0); // transparent black
-    renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.setSize(window.innerWidth, document.documentElement.clientHeight);
     renderer.setPixelRatio(window.devicePixelRatio);
     containerRef.current.appendChild(renderer.domElement);
 
@@ -102,9 +102,9 @@ export default function AnimatedBackground() {
 
     // Handle window resize
     const handleResize = () => {
-      camera.aspect = window.innerWidth / window.innerHeight;
+      camera.aspect = window.innerWidth / document.documentElement.clientHeight;
       camera.updateProjectionMatrix();
-      renderer.setSize(window.innerWidth, window.innerHeight);
+      renderer.setSize(window.innerWidth, document.documentElement.clientHeight);
     };
     window.addEventListener('resize', handleResize);
 

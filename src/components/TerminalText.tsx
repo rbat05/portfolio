@@ -4,27 +4,32 @@ interface TerminalTextProps {
     text: string;
     className?: string;
     bulletList?: boolean;
+    onDone?: () => void; // Callback when typing is done
 }
 
-const TerminalText: React.FC<TerminalTextProps> = ({ text, className, bulletList }) => {
+const TerminalText: React.FC<TerminalTextProps> = ({ text, className, bulletList, onDone }) => {
     const [displayText, setDisplayText] = useState('');
     const [showCursor, setShowCursor] = useState(true);
     const [done, setDone] = useState(false);
 
     useEffect(() => {
+        setDone(false);
+        const words = text.split(/(\s+)/); // Keep spaces as tokens
         let index = 0;
-        setDone(false); // Reset done when text changes
+        let current = '';
         const interval = setInterval(() => {
-            if (index < text.length) {
-                setDisplayText(text.slice(0, index + 1));
+            if (index < words.length) {
+                current += words[index];
+                setDisplayText(current);
                 index++;
             } else {
                 clearInterval(interval);
-                setDone(true); // <-- Add this line
+                setDone(true);
+                if (onDone) onDone(); // Notify parent
             }
-        }, 5);
+        }, 1); // Adjust speed as needed
         return () => clearInterval(interval);
-    }, [text]);
+    }, [text, onDone]);
 
     useEffect(() => {
         if (done) return; // Stop blinking when done

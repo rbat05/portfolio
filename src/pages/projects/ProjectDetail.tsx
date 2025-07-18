@@ -35,8 +35,32 @@ const ProjectDetail = () => {
   const [modalOpen, setModalOpen] = useState(false);
   const [modalImg, setModalImg] = useState('');
 
-  return (
+  // Sequential TerminalText animation state
+  const [currentStep, setCurrentStep] = useState(0);
+  const sections = [
+    {
+      key: 'probandappr',
+      title: '📋 Problem & Approach:',
+      text: project.probandappr,
+    },
+    {
+      key: 'desandimp',
+      title: '⚙️ Design & Implementation:',
+      text: project.desandimp,
+    },
+    {
+      key: 'outcomeandlearn',
+      title: '🎯 Outcome & Learnings:',
+      text: project.outcomeandlearn,
+    },
+    {
+      key: 'nextsteps',
+      title: '🔜 Next Steps:',
+      text: project.nextsteps,
+    },
+  ].filter(s => s.text && s.text.trim() !== '');
 
+  return (
     <div className="relative min-h-screen bg-black text-white">
       <div className="max-w-6xl mx-auto px-4 py-16 relative z-10">
         <AnimatedBackgroundWhite />
@@ -62,7 +86,7 @@ const ProjectDetail = () => {
                     project.images.length === 1
                       ? "flex justify-center"
                       : project.images.length === 2
-                        ? "grid grid-cols-1 sm:grid-cols-2 gap-4" // <-- changed here
+                        ? "grid grid-cols-1 sm:grid-cols-2 gap-4"
                         : "grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4"
                   }
                 >
@@ -101,32 +125,51 @@ const ProjectDetail = () => {
             </div>
           )}
 
+
           <div className="lg:col-span-2 space-y-6">
             <Terminal title="PROJECT_OVERVIEW">
-              {project.probandappr && project.probandappr.trim() !== '' && (
-                <div>
-                  <h3 className="text-white font-bold mb-2">📋 Problem & Approach:</h3>
-                  <TerminalText text={project.probandappr} bulletList className="text-sm" />
-                </div>
-              )}
-              {project.desandimp && project.desandimp.trim() !== '' && (
-                <div>
-                  <h3 className="text-white font-bold mb-2">⚙️ Design & Implementation:</h3>
-                  <TerminalText text={project.desandimp} bulletList className="text-sm" />
-                </div>
-              )}
-              {project.outcomeandlearn && project.outcomeandlearn.trim() !== '' && (
-                <div>
-                  <h3 className="text-white font-bold mb-2">🎯 Outcome & Learnings:</h3>
-                  <TerminalText text={project.outcomeandlearn} bulletList className="text-sm" />
-                </div>
-              )}
-              {project.nextsteps && project.nextsteps.trim() !== '' && (
-                <div>
-                  <h3 className="text-white font-bold mb-2">🔜 Next Steps:</h3>
-                  <TerminalText text={project.nextsteps} bulletList className="text-sm" />
-                </div>
-              )}
+              {sections.map((section, idx) => {
+                if (idx < currentStep) {
+                  // Already finished, render static bullet list
+                  // Split into sentences for bullet points
+                  const bullets = section.text
+                    ? section.text
+                      .replace(/\r?\n/g, ' ')
+                      .split(/(?<=[.!?])\s+/)
+                      .filter(sentence => sentence.trim() !== '')
+                    : [];
+                  return (
+                    <div key={section.key}>
+                      <h3 className="text-white font-bold mb-2">{section.title}</h3>
+                      <ul className="list-[circle] pl-6 space-y-2 mb-6 text-sm">
+                        {bullets.map((line, i) => (
+                          <li key={i}>{line}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  );
+                } else if (idx === currentStep) {
+                  // Currently animating
+                  return (
+                    <div key={section.key}>
+                      <h3 className="text-white font-bold mb-2">{section.title}</h3>
+                      <TerminalText
+                        text={section.text || ""}
+                        bulletList
+                        className="text-sm"
+                        onDone={() => {
+                          if (currentStep === idx && idx < sections.length - 1) {
+                            setCurrentStep(idx + 1);
+                          }
+                        }}
+                      />
+                    </div>
+                  );
+                } else {
+                  // Not yet started
+                  return null;
+                }
+              })}
             </Terminal>
 
             {project.youtube && (

@@ -41,8 +41,8 @@
       "nextsteps": "Transitioning to full physical build to validate aero-structural and stability assumptions through real-world flight data. Create a Simulink model of the test rocket to determine PID actuator gains. Conduct a live test flight, gather and analyse telemetry. Use findings to inform future design decisions, and hand-off refined designs and documentation to the 5 collaborating sub-teams as part of system integration into the full-scale rocket build.",
       "lastUpdated": "2025-07-19",
       "images": [
-        "/src/assets/images/rocket/rocket1.png",
-        "/src/assets/images/rocket/coupler.png"
+        "/images/rocket/rocket1.png",
+        "/images/rocket/coupler.png"
       ]
     },
     {
@@ -85,9 +85,9 @@
       "nextsteps": "Implement weather-proofing techniques for outdoor electronics. Finalise and 3D print enclosure designs for both nodes. Implement wind speed and direction modules, for expanded functionality.",
       "github": "https://github.com/rbat05/SolarWeatherStation",
       "images": [
-        "/src/assets/images/weather/PowerSystem.jpg",
-        "/src/assets/images/weather/FullSystemAnnotated.jpg",
-        "/src/assets/images/weather/InternalUnitEnclosure.jpg"
+        "/images/weather/PowerSystem.jpg",
+        "/images/weather/FullSystemAnnotated.jpg",
+        "/images/weather/InternalUnitEnclosure.jpg"
       ],
       "lastUpdated": "2025-07-19"
     },
@@ -130,9 +130,9 @@
       "demo": "https://www.youtube.com/watch?v=aH5iZF9_xfY",
       "youtube": "https://www.youtube.com/watch?v=aH5iZF9_xfY",
       "images": [
-        "/src/assets/images/gameboy/NINT.gif",
-        "/src/assets/images/gameboy/Exploded.png",
-        "/src/assets/images/gameboy/SEGA.gif"
+        "/images/gameboy/NINT.gif",
+        "/images/gameboy/Exploded.png",
+        "/images/gameboy/SEGA.gif"
       ],
       "lastUpdated": "2025-07-19"
     },
@@ -171,9 +171,9 @@
       "desandimp": "Used Blender to trace and model the tugboat directly from original schematics, accurately recreating core structural components. Added fine external details including handrails, fly deck, gangway, smokestack, and captain's deck to enhance realism. Designed a display-ready cradle, with “William C Daldy” engravement for presentation and branding. Iterated 3D print settings for detail and structural integrity, adjusting infill and wall thickness to ensure boat floats stably in water.",
       "outcomeandlearn": "Produced a detailed, display-ready, 3D-printable model of the William C Daldy; first batch of five units sold out within 15 minutes. Learned how to interpret and model from engineering schematics while maintaining visual fidelity. Gained practical experience in optimizing models for both aesthetic appeal and manufacturability. Collaborated closely with a peer to ensure consistent design iterations and prepare for scale-up in production.",
       "images": [
-        "/src/assets/images/daldy/Picture2.png",
-        "/src/assets/images/daldy/Picture3.png",
-        "/src/assets/images/daldy/Picture4.png"
+        "/images/daldy/Picture2.png",
+        "/images/daldy/Picture3.png",
+        "/images/daldy/Picture4.png"
       ],
       "lastUpdated": "2025-07-19"
     }

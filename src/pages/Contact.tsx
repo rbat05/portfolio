@@ -28,7 +28,7 @@ const Contact = () => {
       <div className="max-w-6xl mx-auto px-4 py-8">
         <div className="text-center mb-12">
           <h1 className="text-4xl font-mono font-bold mb-4 text-black">
-            CONTACT_PROTOCOL.EXE
+            CONTACT
           </h1>
           <div className="font-mono text-black">
             Choose your preferred communication protocol below.
@@ -36,7 +36,7 @@ const Contact = () => {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-1 gap-8 max-w-md mx-auto">
-          <Terminal title="SOCIAL_LINKS.DAT">
+          <Terminal title="SOCIAL_LINKS">
             <div className="flex flex-col justify-start space-y-2">
               {socialLinks.map((link, index) => (
                 <a

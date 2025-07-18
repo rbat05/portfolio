@@ -9,7 +9,7 @@ const Projects = () => {
       <div className="max-w-6xl mx-auto px-4 py-8">
         <div className="text-center mb-12">
           <h1 className="text-4xl font-mono font-bold mb-4 text-black">
-            PROJECTS_DIRECTORY.EXE
+            PROJECTS
           </h1>
           <div className="font-mono text-black">
             Explore my technical projects and creations

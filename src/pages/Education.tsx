@@ -10,7 +10,7 @@ const Education = () => {
       <div className="max-w-6xl mx-auto px-4 py-8">
         <div className="text-center mb-12">
           <h1 className="text-4xl font-mono font-bold mb-4 text-black">
-            EDUCATION_MODULE.EXE
+            EDUCATION
           </h1>
           <div className="font-mono text-black">
             Academic achievements and learning journey
@@ -19,7 +19,7 @@ const Education = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           <div className="space-y-6">
-            <Terminal title="UNIVERSITY_INFO.TXT">
+            <Terminal title="UNIVERSITY_INFO">
               <div className="space-y-4">
                 <div>
                   <span className="text-white">🎓 Institution:</span>
@@ -39,7 +39,7 @@ const Education = () => {
               </div>
             </Terminal>
 
-            <Terminal title="ACHIEVEMENTS.LOG">
+            <Terminal title="ACHIEVEMENTS">
               <div className="space-y-4">
                 {educationData.achievements.map((achievement, index) => (
                   <div key={index} className="flex items-start space-x-3">
@@ -55,7 +55,7 @@ const Education = () => {
           </div>
 
           <div className="space-y-6">
-            <Terminal title="SEMESTER_GPA.DAT">
+            <Terminal title="SEMESTER_GPA">
               <div className="overflow-x-auto">
                 <table className="w-full font-mono">
                   <thead>
@@ -78,13 +78,13 @@ const Education = () => {
               </div>
             </Terminal>
 
-            <Terminal title="COURSE_MANAGER.EXE">
+            <Terminal title="COURSE_VIEWER">
               <div className="space-y-4">
                 <button
                   onClick={() => setShowEnrollments(!showEnrollments)}
                   className="w-full px-4 py-2 border-2 border-white bg-black text-white hover:bg-white hover:text-black transition-all duration-200 font-mono"
                 >
-                  📘 {showEnrollments ? 'Hide' : 'Show'} Enrollments
+                  {showEnrollments ? 'Hide' : 'Show'} Enrollments
                 </button>
 
                 {showEnrollments && (

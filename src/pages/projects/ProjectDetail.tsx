@@ -8,13 +8,13 @@ const ProjectDetail = () => {
 
   if (!project) {
     return (
-      <div className="min-h-screen pt-20 bg-black text-green-400">
+      <div className="min-h-screen pt-20 bg-black text-white">
         <div className="max-w-6xl mx-auto px-4 py-8">
           <Terminal title="ERROR.LOG">
             <div className="text-center">
               <div className="text-6xl mb-4">404</div>
               <div className="text-xl mb-4">Project not found</div>
-              <Link to="/projects" className="text-green-300 hover:text-green-400">
+              <Link to="/projects" className="text-white hover:text-white">
                 Return to projects directory
               </Link>
             </div>
@@ -28,12 +28,12 @@ const ProjectDetail = () => {
   const statusIcon = project.status === 'Complete' ? '✅' : '⏳';
 
   return (
-    <div className="min-h-screen pt-20 bg-black text-green-400">
+    <div className="min-h-screen pt-20 bg-black text-white">
       <div className="max-w-6xl mx-auto px-4 py-8">
         <div className="mb-8">
           <Link
             to="/projects"
-            className="font-mono text-sm text-green-300 hover:text-green-400"
+            className="font-mono text-sm text-white hover:text-white"
           >
             &lt; Back to Projects
           </Link>
@@ -41,10 +41,10 @@ const ProjectDetail = () => {
 
         <div className="text-center mb-12">
           <div className="text-6xl mb-4">{project.thumbnail}</div>
-          <h1 className="text-4xl font-mono font-bold mb-4 wireframe-heading text-green-400">
+          <h1 className="text-4xl font-mono font-bold mb-4 wireframe-heading text-white">
             {project.title}
           </h1>
-          <div className="font-mono mb-4 text-green-300">
+          <div className="font-mono mb-4 text-white">
             {project.tagline}
           </div>
           <div className={`font-mono text-sm ${statusColor}`}>
@@ -57,22 +57,22 @@ const ProjectDetail = () => {
             <Terminal title="PROJECT_OVERVIEW.TXT">
               <div className="space-y-6">
                 <div>
-                  <h3 className="text-green-300 font-bold mb-2">📋 Background:</h3>
+                  <h3 className="text-white font-bold mb-2">📋 Background:</h3>
                   <p className="text-sm leading-relaxed">{project.background}</p>
                 </div>
 
                 <div>
-                  <h3 className="text-green-300 font-bold mb-2">🛠️ Approach:</h3>
+                  <h3 className="text-white font-bold mb-2">🛠️ Approach:</h3>
                   <p className="text-sm leading-relaxed">{project.approach}</p>
                 </div>
 
                 <div>
-                  <h3 className="text-green-300 font-bold mb-2">⚡ Challenges:</h3>
+                  <h3 className="text-white font-bold mb-2">⚡ Challenges:</h3>
                   <p className="text-sm leading-relaxed">{project.challenges}</p>
                 </div>
 
                 <div>
-                  <h3 className="text-green-300 font-bold mb-2">🎯 Outcome:</h3>
+                  <h3 className="text-white font-bold mb-2">🎯 Outcome:</h3>
                   <p className="text-sm leading-relaxed">{project.outcome}</p>
                 </div>
               </div>
@@ -88,7 +88,7 @@ const ProjectDetail = () => {
                     title="Project Demo"
                     frameBorder="0"
                     allowFullScreen
-                    className="border-2 border-green-400"
+                    className="border-2 border-white"
                   ></iframe>
                 </div>
               </Terminal>
@@ -98,12 +98,12 @@ const ProjectDetail = () => {
           <div className="space-y-6">
             <Terminal title="TECH_STACK.CFG">
               <div className="space-y-3">
-                <h3 className="text-green-300 font-bold">Technologies:</h3>
+                <h3 className="text-white font-bold">Technologies:</h3>
                 <div className="flex flex-wrap gap-2">
                   {project.tech.map((tech, index) => (
                     <span
                       key={index}
-                      className="px-2 py-1 border border-green-400 text-xs font-mono"
+                      className="px-2 py-1 border border-white text-xs font-mono"
                     >
                       {tech}
                     </span>
@@ -119,7 +119,7 @@ const ProjectDetail = () => {
                     href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block p-3 border-2 border-green-400 hover:bg-green-400 hover:text-black transition-all duration-200 font-mono text-sm"
+                    className="block p-3 border-2 border-white hover:bg-white hover:text-black transition-all duration-200 font-mono text-sm"
                   >
                     🐙 View Source Code
                   </a>
@@ -130,7 +130,7 @@ const ProjectDetail = () => {
                     href={project.demo}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block p-3 border-2 border-green-400 hover:bg-green-400 hover:text-black transition-all duration-200 font-mono text-sm"
+                    className="block p-3 border-2 border-white hover:bg-white hover:text-black transition-all duration-200 font-mono text-sm"
                   >
                     🚀 Live Demo
                   </a>

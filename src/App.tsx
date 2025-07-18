@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-// import { ThemeProvider, useTheme } from './context/ThemeContext';
 import Navbar from './components/Navbar.tsx';
 import Footer from './components/Footer.tsx';
 import SplashScreen from './components/SplashScreen.tsx';
@@ -9,26 +8,18 @@ import Education from './pages/Education.tsx';
 import Projects from './pages/Projects.tsx';
 import Contact from './pages/Contact.tsx';
 import ProjectDetail from './pages/projects/ProjectDetail.tsx';
+import AnimatedBackground from './components/AnimatedBackground.tsx';
 
 function AppContent() {
   // const { isDarkMode, toggleTheme } = useTheme();
   const [showSplash, setShowSplash] = useState(true);
-  const [hasVisited, setHasVisited] = useState(false);
 
   useEffect(() => {
-    // Check if user has visited before in this session
-    const visited = sessionStorage.getItem('hasVisited');
-    if (visited) {
-      setHasVisited(true);
+    const timer = setTimeout(() => {
       setShowSplash(false);
-    }
+    }, 2000); // Show splash for 2 seconds
+    return () => clearTimeout(timer);
   }, []);
-
-  const handleSplashComplete = () => {
-    setShowSplash(false);
-    setHasVisited(true);
-    sessionStorage.setItem('hasVisited', 'true');
-  };
 
   // Custom cursor effect
   useEffect(() => {
@@ -39,8 +30,8 @@ function AppContent() {
       left: 0;
       width: 10px;
       height: 10px;
-      background: rgba(0, 0, 0, 0.5);
-      border: 2px solid #00ff00;
+      background: rgba(255, 255, 255, 0.5);
+      border: 2px solid #000000;
       border-radius: 50%;
       pointer-events: none;
       z-index: 9999;
@@ -63,12 +54,13 @@ function AppContent() {
     };
   }, []);
 
-  if (showSplash && !hasVisited) {
-    return <SplashScreen onComplete={handleSplashComplete} />;
+  if (showSplash) {
+    return <SplashScreen />;
   }
 
   return (
-    <div className="min-h-screen font-mono bg-black text-green-400">
+    <div className="relative min-h-screen">
+      <AnimatedBackground />
       <Navbar />
       <main>
         <Routes>

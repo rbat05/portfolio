@@ -18,12 +18,12 @@ const Terminal: React.FC<TerminalProps> = ({ children, title = "TERMINAL", class
   }, []);
 
   return (
-    <div className={`wireframe-terminal ${className} border-green-400 bg-black border-2`}>
-      <div className="px-4 py-2 flex justify-between items-center bg-green-400 text-black">
+    <div className={`wireframe-terminal ${className} border-black bg-black border-2`}>
+      <div className="px-4 py-2 flex justify-between items-center bg-white text-black">
         <span className="font-mono font-bold">{title}</span>
         <span className="font-mono text-sm">{time}</span>
       </div>
-      <div className="p-6 font-mono text-green-400">
+      <div className="p-6 font-mono text-white">
         {children}
       </div>
     </div>

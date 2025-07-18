@@ -20,92 +20,45 @@ const Contact = () => {
       icon: '🐙',
       url: 'https://github.com/johndoe',
       handle: '@johndoe'
-    },
-    {
-      name: 'YouTube',
-      icon: '🎥',
-      url: 'https://youtube.com/@johndoe',
-      handle: '@johndoe'
     }
   ];
 
   return (
-    <div className="min-h-screen pt-20 bg-black text-green-400">
+    <div className="min-h-screen pt-20 text-white">
       <div className="max-w-6xl mx-auto px-4 py-8">
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-mono font-bold mb-4 wireframe-heading text-green-400">
+          <h1 className="text-4xl font-mono font-bold mb-4 text-black">
             CONTACT_PROTOCOL.EXE
           </h1>
-          <div className="font-mono text-green-300">
-            Establishing communication channels...
+          <div className="font-mono text-black">
+            Choose your preferred communication protocol below.
           </div>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          <div>
-            <Terminal title="CONNECT.TXT">
-              <div className="space-y-4">
-                <div className="text-xl font-bold text-green-400">
-                  📬 Let's connect like it's 1999.
-                </div>
-                <div className="text-sm text-green-300">
-                  Choose your preferred communication protocol below.
-                  All channels are monitored and responses are guaranteed
-                  within 24 hours (or less if I'm not debugging something).
-                </div>
-                <div className="text-xs text-green-500 mt-4">
-                  🔒 Secure connection established<br />
-                  🌐 All protocols available<br />
-                  ⚡ Real-time response enabled
-                </div>
-              </div>
-            </Terminal>
-          </div>
-
-          <div>
-            <Terminal title="SOCIAL_LINKS.DAT">
-              <div className="space-y-4">
-                {socialLinks.map((link, index) => (
-                  <a
-                    key={index}
-                    href={link.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block p-3 border-2 border-green-400 hover:bg-green-400 hover:text-black transition-all duration-200 group"
-                  >
-                    <div className="flex items-center space-x-4">
-                      <span className="text-2xl">{link.icon}</span>
-                      <div>
-                        <div className="font-bold text-green-400 group-hover:text-black">
-                          {link.name}
-                        </div>
-                        <div className="text-sm text-green-300 group-hover:text-black">
-                          {link.handle}
-                        </div>
+        <div className="grid grid-cols-1 lg:grid-cols-1 gap-8 max-w-md mx-auto">
+          <Terminal title="SOCIAL_LINKS.DAT">
+            <div className="flex flex-col justify-start space-y-2">
+              {socialLinks.map((link, index) => (
+                <a
+                  key={index}
+                  href={link.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block p-3 border-2 border-white hover:bg-white hover:text-black transition-all duration-200 group"
+                >
+                  <div className="flex items-center space-x-4">
+                    <span className="text-2xl">{link.icon}</span>
+                    <div>
+                      <div className="font-bold text-white group-hover:text-black">
+                        {link.name}
+                      </div>
+                      <div className="text-sm text-white group-hover:text-black">
+                        {link.handle}
                       </div>
                     </div>
-                  </a>
-                ))}
-              </div>
-            </Terminal>
-          </div>
-        </div>
-
-        <div className="mt-12 text-center">
-          <div className="inline-block border-2 border-green-400 px-6 py-3">
-            <div className="font-mono text-sm text-green-300">
-              💡 Pro tip: Email is the fastest way to reach me for professional inquiries
-            </div>
-          </div>
-        </div>
-
-        <div className="mt-8 text-center">
-          <Terminal title="STATUS.LOG" className="inline-block">
-            <div className="text-xs space-y-1">
-              <div>🟢 Online Status: Available</div>
-              <div>📍 Location: University Campus</div>
-              <div>⏰ Response Time: &lt; 24 hours</div>
-              <div>💬 Preferred Method: Email</div>
+                  </div>
+                </a>
+              ))}
             </div>
           </Terminal>
         </div>

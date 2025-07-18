@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        mono: ['VT323', 'monospace'],
+        mono: ['Nippo-Regular', 'sans-serif'],
       },
       colors: {
         'terminal-green': '#00ff00',

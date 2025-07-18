@@ -3,46 +3,32 @@ import { Link } from 'react-router-dom';
 const Footer = () => {
   // No dark mode switching, only static dark styling
   return (
-    <footer className="bg-black border-t border-green-400 text-green-400 font-mono mt-16 wireframe-footer">
+    <footer className="bg-black border-white text-white font-mono mt-16 wireframe-footer">
       <div className="max-w-6xl mx-auto px-4 py-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="flex justify-center">
           <div>
-            <h3 className="text-lg mb-4"> SITE DIRECTORY</h3>
-            <div className="space-y-2">
-              <Link to="/" className="block hover:text-green-300 transition-colors">
+            <h3 className="text-xl mb-4 text-center">SITE DIRECTORY</h3>
+            <div className="space-y-2 text-center">
+              <Link to="/" className="block hover:text-white transition-colors flashing-hover-title">
                 [HOME]
               </Link>
-              <Link to="/education" className="block hover:text-green-300 transition-colors">
+              <Link to="/education" className="block hover:text-white transition-colors flashing-hover-title">
                 [EDUCATION]
               </Link>
-              <Link to="/projects" className="block hover:text-green-300 transition-colors">
+              <Link to="/projects" className="block hover:text-white transition-colors flashing-hover-title">
                 [PROJECTS]
               </Link>
-              <Link to="/contact" className="block hover:text-green-300 transition-colors">
+              <Link to="/contact" className="block hover:text-white transition-colors flashing-hover-title">
                 [CONTACT]
               </Link>
-            </div>
-          </div>
-
-          <div className="ml-40">
-            <h3 className="text-lg mb-4"> HOSTING INFO</h3>
-            <a
-              href="https://github.com/yourusername/portfolio"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block hover:text-green-300 transition-colors mb-4"
-            >
-              📁 Hosted on GitHub
-            </a>
-            <div className="text-sm text-green-500 space-y-1">
-              <p>🖥️ Best viewed in Netscape Navigator</p>
-              <p>👨‍💻 Webmaster: John Doe</p>
-              <p>📅 Last updated: {new Date().toLocaleDateString()}</p>
+              <div className="text-sm text-white space-y-1">
+                🖥️ Best viewed in Netscape Navigator
+              </div>
             </div>
           </div>
         </div>
 
-        <div className="mt-8 pt-4 border-t border-green-400 text-center text-sm">
+        <div className="mt-8 pt-4 border-t border-white text-center text-sm">
           <p className="animate-pulse">
             &copy; 2024 John Doe Portfolio | Made with ❤️ and lots of ☕
           </p>

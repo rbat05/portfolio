@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+@import './nippo.css';
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -8,35 +8,51 @@
 }
 
 body {
-  font-family: 'VT323', monospace;
+  font-family: "Nippo-Regular";
   overflow-x: hidden;
 }
 
 ::selection {
-  background: #137236;
+  background: #c0c0c0;
   color: #000;
 }
 
 /* Flashing animation for Download CV button on hover */
-@keyframes flash-green-black {
+@keyframes flash-white-black {
   0% {
-    background-color: #22c55e;
+    background-color: #fff;
     color: #000;
   }
 
   50% {
     background-color: #000;
-    color: #22c55e;
+    color: #fff;
   }
 
   100% {
-    background-color: #22c55e;
+    background-color: #fff;
     color: #000;
   }
 }
 
 .flashing-hover:hover {
-  animation: flash-green-black 0.35s steps(1, end) infinite;
+  animation: flash-white-black 0.35s steps(1, end) infinite;
+}
+
+.flashing-hover-title:hover {
+  animation: flash-title-color 0.35s steps(1, end) infinite;
+}
+
+@keyframes flash-title-color {
+
+  0%,
+  100% {
+    color: #fff;
+  }
+
+  50% {
+    color: #000;
+  }
 }
 
 /* 3D Wireframe Effects */
@@ -44,37 +60,18 @@ body {
   position: relative;
   transform-style: preserve-3d;
   box-shadow:
-    0 0 0 2px currentColor,
-    8px 8px 0 0 rgba(0, 255, 0, 0.3),
-    16px 16px 0 0 rgba(0, 255, 0, 0.1);
+    0 0 0 2px #fff,
+    8px 8px 0 0 rgba(255, 255, 255, 0.3),
+    16px 16px 0 0 rgba(255, 255, 255, 0.1);
   transition: all 0.3s ease;
 }
 
 .wireframe-terminal:hover {
   transform: translateZ(10px);
   box-shadow:
-    0 0 0 2px currentColor,
-    12px 12px 0 0 rgba(0, 255, 0, 0.4),
-    24px 24px 0 0 rgba(0, 255, 0, 0.2);
-}
-
-/* Wireframe headings - outline only */
-.wireframe-heading {
-  -webkit-text-stroke: 2px currentColor;
-  -webkit-text-fill-color: transparent;
-  text-shadow:
-    2px 2px 0 rgba(0, 255, 0, 0.3),
-    4px 4px 0 rgba(0, 255, 0, 0.2),
-    6px 6px 0 rgba(0, 255, 0, 0.1);
-  filter: drop-shadow(0 0 10px currentColor);
-}
-
-.wireframe-subheading {
-  -webkit-text-stroke: 1px currentColor;
-  -webkit-text-fill-color: transparent;
-  text-shadow:
-    1px 1px 0 rgba(0, 255, 0, 0.3),
-    2px 2px 0 rgba(0, 255, 0, 0.2);
+    0 0 0 2px #fff,
+    12px 12px 0 0 rgba(255, 255, 255, 0.4),
+    24px 24px 0 0 rgba(255, 255, 255, 0.2);
 }
 
 /* Wireframe buttons */
@@ -82,8 +79,8 @@ body {
   position: relative;
   transform-style: preserve-3d;
   box-shadow:
-    0 0 0 2px currentColor,
-    4px 4px 0 0 rgba(0, 255, 0, 0.3);
+    0 0 0 2px #fff,
+    4px 4px 0 0 rgba(255, 255, 255, 0.3);
   transition: all 0.2s ease;
 }
 
@@ -91,7 +88,7 @@ body {
   transform: translateZ(5px);
   box-shadow:
     0 0 0 2px currentColor,
-    6px 6px 0 0 rgba(0, 255, 0, 0.4);
+    6px 6px 0 0 rgba(255, 255, 255, 0.3);
 }
 
 /* Wireframe cards */
@@ -99,34 +96,34 @@ body {
   position: relative;
   transform-style: preserve-3d;
   box-shadow:
-    0 0 0 2px currentColor,
-    6px 6px 0 0 rgba(0, 255, 0, 0.3),
-    12px 12px 0 0 rgba(0, 255, 0, 0.1);
+    0 0 0 2px #fff,
+    6px 6px 0 0 rgba(255, 255, 255, 0.3),
+    12px 12px 0 0 rgba(255, 255, 255, 0.1);
   transition: all 0.3s ease;
 }
 
 .wireframe-card:hover {
   transform: translateZ(8px);
   box-shadow:
-    0 0 0 2px currentColor,
-    10px 10px 0 0 rgba(0, 255, 0, 0.4),
-    20px 20px 0 0 rgba(0, 255, 0, 0.2);
+    0 0 0 2px #fff,
+    10px 10px 0 0 rgba(255, 255, 255, 0.4),
+    20px 20px 0 0 rgba(255, 255, 255, 0.2);
 }
 
 /* Wireframe navigation */
 .wireframe-nav {
   position: relative;
   box-shadow:
-    0 0 0 2px currentColor,
-    0 4px 0 0 rgba(0, 255, 0, 0.3);
+    0 0 0 2px #fff,
+    0 4px 0 0 rgba(255, 255, 255, 0.3);
 }
 
 /* Wireframe footer */
 .wireframe-footer {
   position: relative;
   box-shadow:
-    0 0 0 2px currentColor,
-    0 -4px 0 0 rgba(0, 255, 0, 0.3);
+    0 0 0 2px #fff,
+    0 4px 0 0 rgba(255, 255, 255, 0.3);
 }
 
 /* Grid pattern background for wireframe effect */
@@ -138,8 +135,8 @@ body {
   right: 0;
   bottom: 0;
   background-image:
-    linear-gradient(rgba(0, 255, 0, 0.1) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0, 255, 0, 0.1) 1px, transparent 1px);
+    linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
   background-size: 20px 20px;
   pointer-events: none;
   opacity: 0.3;
@@ -164,7 +161,7 @@ body {
 
 /* Glowing text effect */
 .text-glow {
-  text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00;
+  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff;
 }
 
 /* Terminal scanlines effect */
@@ -175,7 +172,7 @@ body {
   left: 0;
   bottom: 0;
   right: 0;
-  background: linear-gradient(transparent 60%, rgba(0, 255, 0, 0.12) 40%);
+  background: linear-gradient(transparent 60%, rgba(255, 255, 255, 0.12) 40%);
   background-size: 100% 6px;
   pointer-events: none;
 }
@@ -202,7 +199,7 @@ body {
 html {
   scrollbar-width: thin;
   /* "auto" or "thin" */
-  scrollbar-color: #00ff00a9 #000;
+  scrollbar-color: #fff #000;
   /* thumb color, track color */
 }
 
@@ -212,17 +209,17 @@ html {
 }
 
 ::-webkit-scrollbar-track {
-  background: #000000;
-  border: 1px solid #00ff00;
+  background: #000;
+  border: 1px solid #fff;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #00ff00;
-  border: 1px solid #000000;
+  background: #fff;
+  border: 1px solid #000;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #00cc00;
+  background: #ccc;
 }
 
 /* Retro button hover effects */
@@ -239,7 +236,7 @@ html {
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(0, 255, 0, 0.2), transparent);
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
   transition: left 0.5s ease;
 }
 
@@ -250,7 +247,7 @@ html {
 /* Matrix-style background pattern */
 .matrix-bg {
   background-image:
-    radial-gradient(circle at 1px 1px, rgba(0, 255, 0, 0.1) 1px, transparent 0);
+    radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.1) 1px, transparent 0);
   background-size: 20px 20px;
 }
 

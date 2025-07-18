@@ -3,10 +3,6 @@
 @tailwind components;
 @tailwind utilities;
 
-* {
-  cursor: none !important;
-}
-
 body {
   font-family: "Nippo-Regular";
   overflow-x: hidden;

@@ -13,7 +13,7 @@ const Education = () => {
             EDUCATION
           </h1>
           <div className="font-mono text-black">
-            Academic achievements and learning journey
+            Academic achievements and learning journey.
           </div>
         </div>
 

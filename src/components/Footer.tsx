@@ -1,9 +1,8 @@
 import { Link } from 'react-router-dom';
 
 const Footer = () => {
-  // No dark mode switching, only static dark styling
   return (
-    <footer className="bg-black border-white text-white font-mono mt-16 wireframe-footer">
+    <footer className="bg-black border-white text-white font-mono mt-16 wireframe-footer absolute">
       <div className="max-w-6xl mx-auto px-4 py-8">
         <div className="flex justify-center">
           <div>

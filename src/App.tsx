@@ -21,39 +21,6 @@ function AppContent() {
     return () => clearTimeout(timer);
   }, []);
 
-  // Custom cursor effect
-  useEffect(() => {
-    const cursor = document.createElement('div');
-    cursor.style.cssText = `
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 10px;
-      height: 10px;
-      background: rgba(255, 255, 255, 0.5);
-      border: 2px solid #000000;
-      border-radius: 50%;
-      pointer-events: none;
-      z-index: 9999;
-      transition: all 0.025s ease;
-    `;
-    document.body.appendChild(cursor);
-
-    const moveCursor = (e: MouseEvent) => {
-      cursor.style.left = `${e.clientX - 3}px`;
-      cursor.style.top = `${e.clientY}px`;
-    };
-
-    document.addEventListener('mousemove', moveCursor);
-
-    return () => {
-      document.removeEventListener('mousemove', moveCursor);
-      if (cursor.parentNode) {
-        cursor.parentNode.removeChild(cursor);
-      }
-    };
-  }, []);
-
   if (showSplash) {
     return <SplashScreen />;
   }

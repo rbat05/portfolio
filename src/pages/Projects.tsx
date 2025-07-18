@@ -12,7 +12,7 @@ const Projects = () => {
             PROJECTS
           </h1>
           <div className="font-mono text-black">
-            Explore my technical projects and creations
+            Explore my technical projects and creations — click each tile to learn more.
           </div>
         </div>
 

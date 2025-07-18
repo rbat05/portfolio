@@ -92,6 +92,7 @@ export default function AnimatedBackground() {
     scene.add(intersections);
 
     // Animation: animate distortion of grid lines
+    let animationFrameId: number;
     const animate = () => {
       const time = performance.now() * 0.0003;
       // Animate horizontal lines
@@ -127,7 +128,7 @@ export default function AnimatedBackground() {
       intersectionsGeometry.setFromPoints(updatedIntersections);
 
       renderer.render(scene, camera);
-      requestAnimationFrame(animate);
+      animationFrameId = requestAnimationFrame(animate);
     };
     animate();
 
@@ -151,6 +152,11 @@ export default function AnimatedBackground() {
         line.geometry.dispose();
         (line.material as THREE.Material).dispose();
       });
+      intersectionsGeometry.dispose();
+      intersectionMaterial.dispose();
+      scene.clear();
+      cancelAnimationFrame(animationFrameId);
+      renderer.dispose();
     };
   }, []);
 

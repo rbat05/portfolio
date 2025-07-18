@@ -11,16 +11,39 @@
         "Simulink",
         "Fusion 360"
       ],
+      "skills1": [
+        "OpenRocket",
+        "Simulink",
+        "ANSYS FEA/CFD"
+      ],
+      "skills2": [
+        "Fusion 360 CAD",
+        "3D Printing",
+        "Laser Cutting"
+      ],
+      "skills3": [
+        "Team Leadership",
+        "Project Management",
+        "Cross-Disciplinary Integration",
+        "Milestone Planning",
+        "Future-proof Documentation",
+        "Timeline Management"
+      ],
+      "skills1name": "Simulation & Modelling:",
+      "skills2name": "Design & Manufacturing:",
+      "skills3name": "Project Management & Leadership:",
       "thumbnail": "🚀",
-      "term": "Spring 2024",
-      "tagline": "Bringing back the golden age of terminal communication",
-      "background": "Inspired by early BBS systems and IRC clients, this project recreates the nostalgic experience of terminal-based communication with modern real-time capabilities.",
-      "approach": "Built using React for the frontend terminal interface, Node.js backend with Socket.io for real-time messaging, and implemented custom ASCII art rendering.",
-      "challenges": "Creating an authentic terminal feel while maintaining modern usability, implementing proper message threading, and ensuring cross-browser compatibility.",
-      "outcome": "Successfully deployed application with 100+ active users during demo period. Received positive feedback for authentic retro aesthetic.",
-      "github": "https://github.com/yourusername/terminal-chat",
-      "demo": "https://yourdemo.com/terminal-chat",
-      "youtube": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+      "term": "June 2025 — Present",
+      "tagline": "Goal: Design a dual-axis control system enabling altitude and roll control targeting a 10,000 ft apogee with ±1% accuracy.",
+      "probandappr": "Required a precision control system for the Australian Universities Rocketry Competition 2026 rocket to actively stabilise the flight, and achieving apogee target with required accuracy. Defined a dual-axis control architecture combining airbrakes for altitude control, and reaction wheels for roll stabilisation. Conducted research into drag & roll control, rocket stability, and dynamics modelling. Initiated a test-driven development approach: designing a small-scale test rocket to validate control concepts and verify flight stability under real-world conditions. Leading a team of 3, coordinating design decisions and deliverables to ensure the team achieves the September 2025 test launch milestone. Results from the prototype will guide system refinement and parameter tuning for integration into the full-scale competition rocket.",
+      "desandimp": "Developed an OpenRocket flight simulation to model stability and aerodynamics and initiated self-learning ANSYS FEA and CFD for aerodynamic and structural validation. Designed core structural components (nose cone, tube coupler, fins, motor mount) to be manufactured using 3D printing and laser cutting, considering structural and thermal loading. Currently assembling the test rocket, transitioning from simulation to build stage.",
+      "outcomeandlearn": "Successfully initiated the test rocket build, with core components designed and prototyped. Developed skills in team leadership, project management, and cross-disciplinary integration of aerodynamics, control systems, and structural design. Gained practical experience in OpenRocket simulations and ANSYS FEA/CFD for aerospace applications.",
+      "nextsteps": "Transitioning to full physical build to validate aero-structural and stability assumptions through real-world flight data. Create a Simulink model of the test rocket to determine PID actuator gains. Conduct a live test flight, gather and analyse telemetry. Use findings to inform future design decisions, and hand-off refined designs and documentation to the 5 collaborating sub-teams as part of system integration into the full-scale rocket build.",
+      "lastUpdated": "2025-07-19",
+      "images": [
+        "/src/assets/images/rocket/rocket1.png",
+        "/src/assets/images/rocket/coupler.png"
+      ]
     },
     {
       "id": "weather",
@@ -33,15 +56,40 @@
         "Data Visualization",
         "Electronics"
       ],
+      "skills1": [
+        "ESP32/8266",
+        "Arduino Framework"
+      ],
+      "skills2": [
+        "ESPNOW",
+        "ESPAsyncWebServer",
+        "Sensor Instrumentation",
+        "Data Logging",
+        "Data Visualization"
+      ],
+      "skills3": [
+        "Fusion 360 CAD",
+        "3D Printing",
+        "EasyEDA PCB Prototyping",
+        "Soldering"
+      ],
+      "skills1name": "Platforms:",
+      "skills2name": "Technologies:",
+      "skills3name": "Design & Manufacturing:",
       "thumbnail": "🌦️",
-      "term": "Fall 2023",
-      "tagline": "Transforming digital images into retro text art",
-      "background": "ASCII art has been a cornerstone of early computer graphics. This tool modernizes the conversion process while maintaining the charm of text-based imagery.",
-      "approach": "Implemented image processing algorithms using Python PIL, created web interface with Flask, and optimized for various ASCII character sets.",
-      "challenges": "Balancing detail preservation with ASCII limitations, optimizing processing speed for large images, and creating an intuitive user interface.",
-      "outcome": "Generated over 1000 ASCII artworks, integrated into multiple retro-themed projects, and featured in university tech showcase.",
-      "github": "https://github.com/yourusername/ascii-generator",
-      "demo": "https://yourdemo.com/ascii-generator"
+      "term": "Dec 2024 — Present",
+      "tagline": "Goal: Design a self-sustaining, off-grid weather station for real-time data logging and visualisation.",
+      "probandappr": "Needed a reliable, self-sustaining weather station capable of real-time monitoring without dependence on mains power or internet connectivity. Designed a modular dual-node system that wirelessly communicates over the ESPNOW protocol to display real-time data and host a web server, based on the Arduino C framework. Prioritised power optimisation by leveraging solar charging, battery management and low-power firmware design. Focused on local data logging and accessible remote data visualisation.",
+      "desandimp": "Developed 2 hardware nodes: Solar-powered ESP32-based sensor hub, ESP8266-based display unit and web server. Implemented robust data collection using BME280 (environmental data) and DS3231 (RTC), with multi-sample averaging for noise reduction. Utilised ESPNOW protocol for efficient wireless data transmission between nodes. Deployed dual data visualisation through a webpage and OLED dashboard for real-time and historical data visualisation, with all data logged to SD cards on both nodes. Engineered fault-tolerant design through sampling, averaging, watchdog timers, and autonomous rebooting logic.",
+      "outcomeandlearn": "Delivered a fully functional, solar-powered weather station capable of week-long autonomous operation on battery power alone. Gained hands-on experience in low-power embedded design, wireless protocols, and hardware-software end-to-end integration. Developed practical skills in enclosure design, PCB prototyping, and firmware development.",
+      "nextsteps": "Implement weather-proofing techniques for outdoor electronics. Finalise and 3D print enclosure designs for both nodes. Implement wind speed and direction modules, for expanded functionality.",
+      "github": "https://github.com/rbat05/SolarWeatherStation",
+      "images": [
+        "/src/assets/images/weather/PowerSystem.jpg",
+        "/src/assets/images/weather/FullSystemAnnotated.jpg",
+        "/src/assets/images/weather/InternalUnitEnclosure.jpg"
+      ],
+      "lastUpdated": "2025-07-19"
     },
     {
       "id": "gameboy",
@@ -54,14 +102,39 @@
         "Hardware Design",
         "Fusion 360"
       ],
+      "skills1": [
+        "Raspberry Pi 3B+",
+        "SPI TFT Display"
+      ],
+      "skills2": [
+        "Linux (RetroPie)",
+        "fbcp-ili9341",
+        "GPIOnext"
+      ],
+      "skills3": [
+        "Fusion 360 CAD",
+        "3D Printing",
+        "PCB Prototyping",
+        "Soldering"
+      ],
+      "skills1name": "Hardware & Embedded:",
+      "skills2name": "Software & Programming:",
+      "skills3name": "Design & Manufacturing:",
       "thumbnail": "👾",
-      "term": "Spring 2024",
-      "tagline": "Building tomorrow's retro games today",
-      "background": "Modern game engines often overcomplicate simple 2D game development. This engine focuses on pixel-perfect rendering and authentic retro game feel.",
-      "approach": "Developed in C++ using OpenGL for rendering and SDL2 for input handling. Implemented sprite batching, tile-based collision, and retro-style audio.",
-      "challenges": "Achieving pixel-perfect rendering across different screen resolutions, implementing efficient sprite batching, and maintaining 60fps performance.",
-      "outcome": "Currently in development with basic rendering and physics systems complete. Planning to release demo games showcasing engine capabilities.",
-      "github": "https://github.com/yourusername/retro-engine"
+      "term": "Dec 2023 — July 2024",
+      "tagline": "Goal: Design a handheld retro games console inspired by the Nintendo Game Boy.",
+      "probandappr": "Wanted a portable, plug-and-play retro gaming console capable of emulating systems up to the PlayStation 1 era. Existing products were too expensive, restrictive, and lacked nostalgic Game Boy form factor. Focused on using off-the-shelf components and a fully 3D-printable design to keep build accessible and customizable.",
+      "desandimp": "Created a custom 3D-printed Game Boy-inspired shell in Fusion 360, optimized for 3D printability and assembly. Integrated a Raspberry Pi 3B+ with RetroPie Linux, a 3.2″ display, original Game Boy buttons, and a LiPo power system for a seamless gaming experience. Engineered active thermal management with dual micro-fans, optimizing airflow and enclosure geometry to maintain system temperature below 60°C under full load.",
+      "outcomeandlearn": "Delivered a fully functional, open-source handheld console capable of stable 30 FPS gameplay up to the PS1 era. Documented the build process extensively, including wiring diagrams, print settings, and assembly instructions. Gained hands-on experience in hardware integration, embedded Linux, and custom PCB interfacing. Learned the importance of power management and thermal design in portable electronics.",
+      "github": "https://github.com/rbat05/RetroPieGameboy",
+      "demo": "https://www.youtube.com/watch?v=aH5iZF9_xfY",
+      "youtube": "https://www.youtube.com/watch?v=aH5iZF9_xfY",
+      "images": [
+        "/src/assets/images/gameboy/NINT.gif",
+        "/src/assets/images/gameboy/Exploded.png",
+        "/src/assets/images/gameboy/SEGA.gif"
+      ],
+      "lastUpdated": "2025-07-19"
     },
     {
       "id": "daldy",
@@ -74,14 +147,35 @@
         "3D Printing",
         "Volunteering"
       ],
+      "skills1": [
+        "Blender",
+        "Ultimaker Cura"
+      ],
+      "skills2": [
+        "Engineering Schematics Interpretation",
+        "Digital Recreation from Schematics",
+        "Peer Collaboration"
+      ],
+      "skills3": [
+        "3D Printing (FDM)",
+        "Print Settings Optimization",
+        "Floating Model Design"
+      ],
+      "skills1name": "Software:",
+      "skills2name": "Engineering & Collaboration:",
+      "skills3name": "3D Printing & Manufacturing:",
       "thumbnail": "🛥️",
-      "term": "Spring 2024",
-      "tagline": "Building tomorrow's retro games today",
-      "background": "Modern game engines often overcomplicate simple 2D game development. This engine focuses on pixel-perfect rendering and authentic retro game feel.",
-      "approach": "Developed in C++ using OpenGL for rendering and SDL2 for input handling. Implemented sprite batching, tile-based collision, and retro-style audio.",
-      "challenges": "Achieving pixel-perfect rendering across different screen resolutions, implementing efficient sprite batching, and maintaining 60fps performance.",
-      "outcome": "Currently in development with basic rendering and physics systems complete. Planning to release demo games showcasing engine capabilities.",
-      "github": "https://github.com/yourusername/retro-engine"
+      "term": "Dec 2024 — Jan 2025",
+      "tagline": "Goal: Digitally recreate the William C Daldy tugboat as a 3D-printable model to support fundraising through merchandise sales.",
+      "probandappr": "The historic William C Daldy tugboat is under threat of losing its seaworthiness, requires urgent funding support. After consulting with the Charity Director, we proposed a miniature 3D-printable model to be sold as memorabilia to support fund raising. Sourced original schematics of the ship, to ensure accuracy in the digital recreation. Developed a strategy to scale and modify the model for optimal 3D printability and visual appeal.",
+      "desandimp": "Used Blender to trace and model the tugboat directly from original schematics, accurately recreating core structural components. Added fine external details including handrails, fly deck, gangway, smokestack, and captain's deck to enhance realism. Designed a display-ready cradle, with “William C Daldy” engravement for presentation and branding. Iterated 3D print settings for detail and structural integrity, adjusting infill and wall thickness to ensure boat floats stably in water.",
+      "outcomeandlearn": "Produced a detailed, display-ready, 3D-printable model of the William C Daldy; first batch of five units sold out within 15 minutes. Learned how to interpret and model from engineering schematics while maintaining visual fidelity. Gained practical experience in optimizing models for both aesthetic appeal and manufacturability. Collaborated closely with a peer to ensure consistent design iterations and prepare for scale-up in production.",
+      "images": [
+        "/src/assets/images/daldy/Picture2.png",
+        "/src/assets/images/daldy/Picture3.png",
+        "/src/assets/images/daldy/Picture4.png"
+      ],
+      "lastUpdated": "2025-07-19"
     }
   ]
 }

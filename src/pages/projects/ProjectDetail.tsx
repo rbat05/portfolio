@@ -62,7 +62,7 @@ const ProjectDetail = () => {
                     project.images.length === 1
                       ? "flex justify-center"
                       : project.images.length === 2
-                        ? "grid grid-cols-2 gap-4"
+                        ? "grid grid-cols-1 sm:grid-cols-2 gap-4" // <-- changed here
                         : "grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4"
                   }
                 >

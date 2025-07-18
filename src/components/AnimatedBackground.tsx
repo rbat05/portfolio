@@ -32,7 +32,6 @@ export default function AnimatedBackground() {
     containerRef.current.appendChild(renderer.domElement);
 
     // VHS wireframe grid parameters
-    // VHS wireframe grid parameters
     const gridRows = 32;
     const gridCols = 32;
     // Calculate cell size so grid cells are square
@@ -71,6 +70,26 @@ export default function AnimatedBackground() {
       scene.add(line);
       lines.push(line);
     }
+    // Store intersection points
+    const intersectionMaterial = new THREE.PointsMaterial({
+      color: 0x000000,
+      size: 0.1,
+      transparent: true,
+      opacity: 0.5,
+    });
+
+    // Calculate intersection points (where grid lines cross)
+    const intersectionPoints: THREE.Vector3[] = [];
+    for (let i = 0; i <= gridRows; i++) {
+      for (let j = 0; j <= gridCols; j++) {
+        const x = (j / gridCols) * gridWidth - gridWidth / 2;
+        const y = (i / gridRows) * gridHeight - gridHeight / 2;
+        intersectionPoints.push(new THREE.Vector3(x, y, 0));
+      }
+    }
+    const intersectionsGeometry = new THREE.BufferGeometry().setFromPoints(intersectionPoints);
+    const intersections = new THREE.Points(intersectionsGeometry, intersectionMaterial);
+    scene.add(intersections);
 
     // Animation: animate distortion of grid lines
     const animate = () => {
@@ -95,6 +114,18 @@ export default function AnimatedBackground() {
         });
         (lines[gridRows + 1 + j].geometry as THREE.BufferGeometry).setFromPoints(col);
       });
+
+      // Animate intersection points to follow the grid distortion
+      const updatedIntersections: THREE.Vector3[] = [];
+      for (let i = 0; i <= gridRows; i++) {
+        for (let j = 0; j <= gridCols; j++) {
+          const x = verticalPoints[j][i].x;
+          const y = horizontalPoints[i][j].y;
+          updatedIntersections.push(new THREE.Vector3(x, y, 0));
+        }
+      }
+      intersectionsGeometry.setFromPoints(updatedIntersections);
+
       renderer.render(scene, camera);
       requestAnimationFrame(animate);
     };
@@ -107,6 +138,8 @@ export default function AnimatedBackground() {
       renderer.setSize(window.innerWidth, document.documentElement.clientHeight);
     };
     window.addEventListener('resize', handleResize);
+
+
 
     // Clean up
     return () => {

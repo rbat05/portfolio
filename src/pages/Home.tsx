@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import Terminal from '../components/Terminal';
 
 const Home = () => {
@@ -7,13 +8,11 @@ const Home = () => {
 
   const fullText = `Welcome to my digital showcase...
 
-I'm Raaghav Batra, a passionate Mechatronics Engineer with a love for creating innovative solutions and exploring the intersection of technology and creativity.
+I'm Raaghav Batra, an engineer passionate about building systems where software, electronics, and mechanics converge. I specialize in hands-on prototyping and solving complex challenges through integrated problem-solving.
 
-Currently pursuing my Bachelor's degree in Mechatronics Engineering with a focus on smart systems, control logic, and hardware-software end-to-end integration.
-
-> Status: Available for internships and collaboration
+> Status: Available for Internships and Collaboration
 > Location: Auckland, New Zealand
-> Interests: Electronics, robotics, and building cool stuff 
+> Interests: Electronics, Robotics, Rocketry, Tennis, and building cool stuff 
 
 Type 'help' for navigation or explore using the menu above.`;
 
@@ -91,18 +90,18 @@ Type 'help' for navigation or explore using the menu above.`;
             <div className="space-y-4 md:space-y-6">
               <Terminal title="QUICK_ACCESS">
                 <div className="space-y-2 sm:space-y-3">
-                  <div className="text-xs sm:text-sm">
+                  <Link to="./education" className="text-xs sm:text-sm block hover:underline">
                     <span className="text-white">📚 Education:</span> 8.00 GPA
-                  </div>
-                  <div className="text-xs sm:text-sm">
-                    <span className="text-white">🚀 Projects:</span> 3+ Complete
-                  </div>
-                  <div className="text-xs sm:text-sm">
+                  </Link>
+                  <Link to="/projects" className="text-xs sm:text-sm block hover:underline">
+                    <span className="text-white">🚀 Projects:</span> 4
+                  </Link>
+                  <a href="https://www.linkedin.com/in/raaghav-batra/" target="_blank" rel="noopener noreferrer" className="text-xs sm:text-sm block hover:underline">
                     <span className="text-white">💼 Status:</span> Available
-                  </div>
-                  <div className="text-xs sm:text-sm">
+                  </a>
+                  <Link to="/contact" className="text-xs sm:text-sm block hover:underline">
                     <span className="text-white">📧 Contact:</span> Ready
-                  </div>
+                  </Link>
                 </div>
               </Terminal>
 
@@ -122,7 +121,7 @@ Type 'help' for navigation or explore using the menu above.`;
             <a
               href="/Raaghav_Batra_CV.pdf"
               download
-              className="inline-block border-2 border-black bg-white text-black font-mono px-4 sm:px-6 py-2 text-sm sm:text-base transition-all duration-200 wireframe-button flashing-hover"
+              className="inline-block border-2 border-black bg-white text-black font-mono px-4 sm:px-6 py-2 text-sm sm:text-base transition-all duration-200 wireframe-button flashing-hover mb-7 sm:mb-0"
             >
               Download CV
             </a>

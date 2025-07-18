@@ -32,11 +32,22 @@ const Education = () => {
                   {educationData.degree}
                 </div>
                 <div>
+                  <span className="text-white">🔧 Specialization:</span>
+                  <br />
+                  {educationData.spec}
+                </div>
+                <div>
+                  <span className="text-white">📅 Graduation / Course Complete:</span>
+                  <br />
+                  {educationData.graduationcoursecomplete}
+                </div>
+                <div>
                   <span className="text-white">📊 Cumulative GPA:</span>
                   <br />
                   <span className="text-2xl font-bold text-white">{educationData.gpa}</span>
                 </div>
               </div>
+
             </Terminal>
 
             <Terminal title="ACHIEVEMENTS">
@@ -102,8 +113,9 @@ const Education = () => {
                       <h3 className="text-white font-bold mb-2">Past Courses:</h3>
                       <ul className="space-y-1">
                         {educationData.pastCourses.map((course, index) => (
-                          <li key={index} className="text-sm">
-                            {course}
+                          <li key={index} className="flex justify-between text-sm">
+                            <span>{course.name}</span>
+                            <span className="text-right font-mono">{course.grade}</span>
                           </li>
                         ))}
                       </ul>

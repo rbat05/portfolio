@@ -1,40 +1,134 @@
 {
-  "university": "University of Engineering",
-  "degree": "Bachelor of Science in Computer Engineering",
-  "gpa": "3.85",
+  "university": "University of Auckland",
+  "degree": "Bachelor of Engineering (Honours) — Penultimate Year ",
+  "spec": "Mechatronics Engineering",
+  "graduationcoursecomplete": "May 2027 / Nov 2026",
+  "gpa": "8.00",
   "semesterGPA": [
-    { "semester": "Fall 2023", "gpa": "3.8" },
-    { "semester": "Spring 2024", "gpa": "3.9" }
+    {
+      "semester": "2025 Semester 1",
+      "gpa": "8.75"
+    },
+    {
+      "semester": "2024 Semester 2",
+      "gpa": "8.25"
+    },
+    {
+      "semester": "2024 Semester 1",
+      "gpa": "7.75"
+    },
+    {
+      "semester": "2023 Semester 2",
+      "gpa": "7.50"
+    },
+    {
+      "semester": "2023 Semester 1",
+      "gpa": "7.75"
+    }
   ],
   "currentCourses": [
-    "Advanced Algorithms",
-    "Computer Networks",
-    "Database Systems",
-    "Software Engineering"
+    "Mathematical Modelling III",
+    "Design of Sensing & Actuating Systems",
+    "Fluids & Structural Mechanics",
+    "Digital Circuit Design"
   ],
   "pastCourses": [
-    "Data Structures",
-    "Operating Systems",
-    "Computer Architecture",
-    "Discrete Mathematics",
-    "Programming Languages",
-    "Web Development"
+    {
+      "name": "Innovation & Entrepreneurship",
+      "grade": "A+"
+    },
+    {
+      "name": "Software Design of Real-Time Systems",
+      "grade": "A"
+    },
+    {
+      "name": "Design & Tuning of Control Systems",
+      "grade": "A+"
+    },
+    {
+      "name": "Electronics & Signal Processing",
+      "grade": "A+"
+    },
+    {
+      "name": "Professional Skills & Collaboration",
+      "grade": "A+"
+    },
+    {
+      "name": "Thermodynamics: Fluids and Heat Transfer",
+      "grade": "A"
+    },
+    {
+      "name": "Dynamic Systems",
+      "grade": "A+"
+    },
+    {
+      "name": "OOP, Data Structures & Algorithms",
+      "grade": "A-"
+    },
+    {
+      "name": "Mathematical Modelling II",
+      "grade": "A-"
+    },
+    {
+      "name": "Intro to Mechatronics",
+      "grade": "A"
+    },
+    {
+      "name": "Mechanical Design and Manufacture",
+      "grade": "A"
+    },
+    {
+      "name": "Mechanics of Materials",
+      "grade": "A"
+    },
+    {
+      "name": "Materials Science",
+      "grade": "A+"
+    },
+    {
+      "name": "Understanding the Global Economy",
+      "grade": "B+"
+    },
+    {
+      "name": "Electrical and Digital Systems",
+      "grade": "A-"
+    },
+    {
+      "name": "Introduction to Software Engineering",
+      "grade": "A"
+    },
+    {
+      "name": "Principles of Engineering Design",
+      "grade": "B+"
+    },
+    {
+      "name": "Engineering Mechanics",
+      "grade": "A+"
+    },
+    {
+      "name": "Engineers in Society",
+      "grade": "A"
+    },
+    {
+      "name": "Mathematical Modelling I",
+      "grade": "A"
+    }
   ],
   "achievements": [
     {
-      "title": "Dean's List",
-      "description": "Fall 2023, Spring 2024",
-      "icon": "🏆"
-    },
-    {
-      "title": "Hackathon Winner",
-      "description": "First place in university coding competition",
-      "icon": "👑"
-    },
-    {
       "title": "Academic Excellence",
-      "description": "Top 10% of graduating class",
+      "description": "Maintained an overall GPA of 8.00 (A grade)",
       "icon": "⭐"
+    },
+    {
+      "title": "High Distinction",
+      "description": "Achieved A+ grade in 7 courses",
+      "icon": "🥇"
+    },
+    {
+      "title": "Beca Build Battle Runner-Up",
+      "description": "Second place in team build competition",
+      "icon": "🥈"
     }
   ]
 }

@@ -6,20 +6,20 @@ const Contact = () => {
     {
       name: 'Email',
       icon: '📧',
-      url: 'mailto:john.doe@email.com',
-      handle: 'john.doe@email.com'
+      url: 'mailto:raaghav.batra@email.com',
+      handle: 'raaghav.batra@email.com'
     },
     {
       name: 'LinkedIn',
       icon: '💼',
-      url: 'https://linkedin.com/in/johndoe',
-      handle: '/in/johndoe'
+      url: 'https://www.linkedin.com/in/raaghav-batra/',
+      handle: '/in/raaghav-batra'
     },
     {
       name: 'GitHub',
       icon: '🐙',
-      url: 'https://github.com/johndoe',
-      handle: '@johndoe'
+      url: 'https://github.com/rbat05',
+      handle: '@rbat05'
     }
   ];
 

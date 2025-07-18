@@ -1,12 +1,17 @@
 {
   "projects": [
     {
-      "id": "project-1",
-      "title": "Terminal Chat App",
-      "description": "Real-time messaging app with retro terminal interface",
-      "status": "Complete",
-      "tech": ["React", "Node.js", "Socket.io"],
-      "thumbnail": "🖥️",
+      "id": "rocket",
+      "title": "Dual-Axis Rocket Control System",
+      "description": "Advanced control system for dual-axis modulation of a rocket during flight.",
+      "status": "In Progress",
+      "tech": [
+        "ANSYS FEA/CFD",
+        "OpenRocket",
+        "Simulink",
+        "Fusion 360"
+      ],
+      "thumbnail": "🚀",
       "term": "Spring 2024",
       "tagline": "Bringing back the golden age of terminal communication",
       "background": "Inspired by early BBS systems and IRC clients, this project recreates the nostalgic experience of terminal-based communication with modern real-time capabilities.",
@@ -18,12 +23,17 @@
       "youtube": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
     },
     {
-      "id": "project-2",
-      "title": "ASCII Art Generator",
-      "description": "Convert images to ASCII art with customizable parameters",
-      "status": "Complete",
-      "tech": ["Python", "PIL", "Flask"],
-      "thumbnail": "🎨",
+      "id": "weather",
+      "title": "Off-Grid Solar Weather Station",
+      "description": "Self-sustaining weather monitoring system with dual-node architecture.",
+      "status": "In Progress",
+      "tech": [
+        "ESP32/8266",
+        "Web Deployment",
+        "Data Visualization",
+        "Electronics"
+      ],
+      "thumbnail": "🌦️",
       "term": "Fall 2023",
       "tagline": "Transforming digital images into retro text art",
       "background": "ASCII art has been a cornerstone of early computer graphics. This tool modernizes the conversion process while maintaining the charm of text-based imagery.",
@@ -34,12 +44,37 @@
       "demo": "https://yourdemo.com/ascii-generator"
     },
     {
-      "id": "project-3",
-      "title": "Retro Game Engine",
-      "description": "2D game engine with pixel-perfect rendering",
-      "status": "In Progress",
-      "tech": ["C++", "OpenGL", "SDL2"],
-      "thumbnail": "🎮",
+      "id": "gameboy",
+      "title": "Custom Portable Gaming Console",
+      "description": "Handheld emulation system with Gameboy-inspired design.",
+      "status": "Complete",
+      "tech": [
+        "RPI 3B+",
+        "Linux (RetroPie)",
+        "Hardware Design",
+        "Fusion 360"
+      ],
+      "thumbnail": "👾",
+      "term": "Spring 2024",
+      "tagline": "Building tomorrow's retro games today",
+      "background": "Modern game engines often overcomplicate simple 2D game development. This engine focuses on pixel-perfect rendering and authentic retro game feel.",
+      "approach": "Developed in C++ using OpenGL for rendering and SDL2 for input handling. Implemented sprite batching, tile-based collision, and retro-style audio.",
+      "challenges": "Achieving pixel-perfect rendering across different screen resolutions, implementing efficient sprite batching, and maintaining 60fps performance.",
+      "outcome": "Currently in development with basic rendering and physics systems complete. Planning to release demo games showcasing engine capabilities.",
+      "github": "https://github.com/yourusername/retro-engine"
+    },
+    {
+      "id": "daldy",
+      "title": "Daldy Tugboat Digital Preservation",
+      "description": "Digital preservation project for the historic Willam C Daldy tugboat.",
+      "status": "Complete",
+      "tech": [
+        "Blender",
+        "3D Modelling",
+        "3D Printing",
+        "Volunteering"
+      ],
+      "thumbnail": "🛥️",
       "term": "Spring 2024",
       "tagline": "Building tomorrow's retro games today",
       "background": "Modern game engines often overcomplicate simple 2D game development. This engine focuses on pixel-perfect rendering and authentic retro game feel.",

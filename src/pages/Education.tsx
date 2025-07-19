@@ -105,7 +105,7 @@ const Education = () => {
                   onClick={() => setShowEnrollments(!showEnrollments)}
                   className="w-full px-4 py-2 border-2 border-white bg-black text-white hover:bg-white hover:text-black transition-all duration-200 font-mono"
                 >
-                  {showEnrollments ? 'Hide' : 'Show'} Past Enrollments
+                  {showEnrollments ? '[HIDE' : '[SHOW'} PAST ENROLLMENTS]
                 </button>
                 {showEnrollments && (
                   <div className="space-y-4 animate-fade-in">

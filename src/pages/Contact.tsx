@@ -4,19 +4,19 @@ const Contact = () => {
 
   const socialLinks = [
     {
-      name: 'Email',
+      name: '[EMAIL]',
       icon: '📧',
       url: 'mailto:raaghav.batra@email.com',
       handle: 'raaghav.batra@email.com'
     },
     {
-      name: 'LinkedIn',
+      name: '[LINKEDIN]',
       icon: '💼',
       url: 'https://www.linkedin.com/in/raaghav-batra/',
       handle: '/in/raaghav-batra'
     },
     {
-      name: 'GitHub',
+      name: '[GITHUB]',
       icon: '🐙',
       url: 'https://github.com/rbat05',
       handle: '@rbat05'

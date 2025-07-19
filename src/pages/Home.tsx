@@ -14,7 +14,8 @@ I'm Raaghav Batra, an engineer passionate about building systems where software,
 > Location: Auckland, New Zealand
 > Interests: Electronics, Robotics, Rocketry, Tennis, and building cool stuff 
 
-Type 'help' for navigation or explore using the menu above.`;
+Use the menu above to navigate.
+Try [EDUCATION], [PROJECTS] or [CONTACT]!`;
 
   useEffect(() => {
     let index = 0;
@@ -119,11 +120,11 @@ Type 'help' for navigation or explore using the menu above.`;
 
           <div className="flex justify-center mt-8 sm:mt-16">
             <a
-              href="/Raaghav_Batra_CV.pdf"
+              href="/Raaghav_Batra_Resume.pdf"
               download
               className="inline-block border-2 border-black bg-white text-black font-mono px-4 sm:px-6 py-2 text-sm sm:text-base transition-all duration-200 wireframe-button flashing-hover mb-7 sm:mb-0"
             >
-              Download CV
+              [DOWNLOAD CV]
             </a>
           </div>
         </div>

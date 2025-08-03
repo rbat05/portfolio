@@ -1,4 +1,4 @@
-# Raaghav Batra's Portfolio
+# Raaghav Batra's Portfolio - [raaghavbatra.com](https://raaghavbatra.com)
 
 Welcome to my personal portfolio website! This project showcases my work, skills, and background as a Mechatronics Engineer, built with a modern, minimalist black-and-white wireframe theme and custom animated effects.
 

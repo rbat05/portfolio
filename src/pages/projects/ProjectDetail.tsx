@@ -4,6 +4,7 @@ import Terminal from '../../components/Terminal';
 import projectsData from '../../data/projects.json';
 import TerminalText from '../../components/TerminalText';
 import AnimatedBackgroundWhite from '../../components/AnimatedBackgroundWhite';
+import UpdatesSection from '../../components/UpdatesSection';
 
 const ProjectDetail = () => {
   const { id } = useParams();
@@ -59,12 +60,13 @@ const ProjectDetail = () => {
       text: project.nextsteps,
     },
   ].filter(s => s.text && s.text.trim() !== '');
+  console.log('Sections:', sections);
 
   return (
     <div className="relative min-h-screen bg-black text-white">
       <div className="max-w-6xl mx-auto px-4 py-16 relative z-10">
         <AnimatedBackgroundWhite />
-        <div className="text-center mb-12">
+        <div className="text-center mb-6">
           <div className="text-6xl mb-4">{project.thumbnail}</div>
           <h1 className="text-4xl font-mono font-bold mb-4 wireframe-heading text-white">
             {project.title}
@@ -77,6 +79,10 @@ const ProjectDetail = () => {
           </div>
         </div>
 
+        {project.update && project.lastUpdated && (
+          <UpdatesSection updates={project.update} lastUpdated={project.lastUpdated} />
+        )}
+
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {project.images && project.images.length > 0 && (
             <div className="lg:col-span-3">
@@ -87,10 +93,16 @@ const ProjectDetail = () => {
                       ? "flex justify-center"
                       : project.images.length === 2
                         ? "grid grid-cols-1 sm:grid-cols-2 gap-4"
-                        : "grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4"
+                        : project.images.length === 3
+                          ? "grid grid-cols-1 sm:grid-cols-3 gap-4"
+                          : project.images.length === 4
+                            ? "grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-4"
+                            : project.images.length === 5
+                              ? "grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4"
+                              : "grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4"
                   }
                 >
-                  {project.images.slice(0, 3).map((src, idx) => (
+                  {project.images.slice(0, 6).map((src, idx) => (
                     <img
                       key={idx}
                       src={src}

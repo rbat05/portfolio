@@ -51,10 +51,20 @@ Try [EDUCATION], [PROJECTS] or [CONTACT]!`;
               <div className="text-xl sm:text-3xl md:text-4xl font-mono mb-2 sm:mb-3 text-black">
                 MECHATRONICS ENGINEER
               </div>
-              <div className="mb-14 sm:mb-24">
+              <div className="mb-12 sm:mb-12">
                 <span className="font-mono text-base sm:text-xl text-black">
                   Glad to have you here — explore my portfolio!
                 </span>
+              </div>
+
+              <div className="flex justify-center mt-8 sm:mt-8">
+                <a
+                  href="/Raaghav_Batra_Resume.pdf"
+                  download
+                  className="inline-block border-2 border-black bg-white text-black font-mono px-4 sm:px-6 py-2 text-sm sm:text-base transition-all duration-200 wireframe-button flashing-hover mb-6"
+                >
+                  [DOWNLOAD CV]
+                </a>
               </div>
             </div>
           </div>
@@ -116,16 +126,6 @@ Try [EDUCATION], [PROJECTS] or [CONTACT]!`;
                 </div>
               </Terminal>
             </div>
-          </div>
-
-          <div className="flex justify-center mt-8 sm:mt-16">
-            <a
-              href="/Raaghav_Batra_Resume.pdf"
-              download
-              className="inline-block border-2 border-black bg-white text-black font-mono px-4 sm:px-6 py-2 text-sm sm:text-base transition-all duration-200 wireframe-button flashing-hover mb-7 sm:mb-0"
-            >
-              [DOWNLOAD CV]
-            </a>
           </div>
         </div>
       </div>

@@ -6,6 +6,7 @@ import SplashScreen from './components/SplashScreen.tsx';
 import Home from './pages/Home.tsx';
 import Education from './pages/Education.tsx';
 import Projects from './pages/Projects.tsx';
+import Experience from './pages/Experience.tsx';
 import Contact from './pages/Contact.tsx';
 import ProjectDetail from './pages/projects/ProjectDetail.tsx';
 import AnimatedBackground from './components/AnimatedBackground.tsx';
@@ -33,6 +34,7 @@ function AppContent() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/education" element={<Education />} />
+          <Route path="/experience" element={<Experience />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/projects/:id" element={<ProjectDetail />} />
           <Route path="/contact" element={<Contact />} />

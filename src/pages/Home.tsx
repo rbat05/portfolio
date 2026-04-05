@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Terminal from '../components/Terminal';
 
@@ -10,12 +10,14 @@ const Home = () => {
 
 I'm Raaghav Batra, an engineer passionate about building systems where software, electronics, and mechanics converge. I specialize in hands-on prototyping and solving complex challenges through integrated problem-solving.
 
-> Status: Available for Internships and Collaboration
+Most recently, at Crown RTC, I've led hands-on mechatronics R&D across sensor systems, hardware characterization, and algorithm design, with a strong focus on turning complex technical problems into practical engineering solutions. My experience includes building custom Python analysis tools for real-world testing and communicating outcomes clearly to both technical teams and senior stakeholders.
+
+> Status: Available for Internships, Graduate, Junior Positions and Collaboration
 > Location: Auckland, New Zealand
 > Interests: Electronics, Robotics, Rocketry, Tennis, and building cool stuff 
 
 Use the menu above to navigate.
-Try [EDUCATION], [PROJECTS] or [CONTACT]!`;
+Try [EDUCATION], [EXPERIENCE], [PROJECTS] or [CONTACT]!`;
 
   useEffect(() => {
     let index = 0;
@@ -102,7 +104,7 @@ Try [EDUCATION], [PROJECTS] or [CONTACT]!`;
               <Terminal title="QUICK_ACCESS">
                 <div className="space-y-2 sm:space-y-3">
                   <Link to="./education" className="text-xs sm:text-sm block hover:underline">
-                    <span className="text-white">📚 Education:</span> 8.00 GPA
+                    <span className="text-white">📚 Education:</span> 8.125 GPA
                   </Link>
                   <Link to="/projects" className="text-xs sm:text-sm block hover:underline">
                     <span className="text-white">🚀 Projects:</span> 4

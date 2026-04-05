@@ -63,6 +63,7 @@ const Navbar: React.FC<NavbarProps> = () => {
             <div className="hidden lg:flex items-center space-x-2">
               {[
                 { path: '/education', label: 'EDUCATION' },
+                { path: '/experience', label: 'EXPERIENCE' },
                 { path: '/projects', label: 'PROJECTS' },
                 { path: '/contact', label: 'CONTACT' }
               ].map(({ path, label }) => (
@@ -86,6 +87,7 @@ const Navbar: React.FC<NavbarProps> = () => {
             <div className="flex flex-col">
               {[
                 { path: '/education', label: 'EDUCATION' },
+                { path: '/experience', label: 'EXPERIENCE' },
                 { path: '/projects', label: 'PROJECTS' },
                 { path: '/contact', label: 'CONTACT' }
               ].map(({ path, label }) => (

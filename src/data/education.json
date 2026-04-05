@@ -1,10 +1,14 @@
 {
   "university": "University of Auckland",
-  "degree": "Bachelor of Engineering (Honours) — Penultimate Year ",
+  "degree": "Bachelor of Engineering (Honours) — Final Year ",
   "spec": "Mechatronics Engineering",
   "graduationcoursecomplete": "May 2027 / Nov 2026",
-  "gpa": "8.00",
+  "gpa": "8.125",
   "semesterGPA": [
+    {
+      "semester": "2025 Semester 2",
+      "gpa": "8.75"
+    },
     {
       "semester": "2025 Semester 1",
       "gpa": "8.75"
@@ -27,12 +31,28 @@
     }
   ],
   "currentCourses": [
-    "Mathematical Modelling III",
-    "Design of Sensing & Actuating Systems",
-    "Fluids & Structural Mechanics",
-    "Digital Circuit Design"
+    "Research Project in Mechatronics Engineering",
+    "Mechatronics Signal Processing & Control",
+    "Mechatronics Design Projects",
+    "Mobile Autonomous Robotics"
   ],
   "pastCourses": [
+    {
+      "name": "Mathematical Modelling III",
+      "grade": "A+"
+    },
+    {
+      "name": "Design of Sensing & Actuating Systems",
+      "grade": "A+"
+    },
+    {
+      "name": "Fluids & Structural Mechanics",
+      "grade": "A+"
+    },
+    {
+      "name": "Digital Circuit Design",
+      "grade": "A"
+    },
     {
       "name": "Innovation & Entrepreneurship",
       "grade": "A+"
@@ -117,18 +137,18 @@
   "achievements": [
     {
       "title": "Academic Excellence",
-      "description": "Maintained an overall GPA of 8.00 (A grade)",
+      "description": "Maintained an overall GPA of 8.125 (A grade)",
       "icon": "⭐"
     },
     {
-      "title": "High Distinction",
-      "description": "Achieved A+ grade in 7 / 20 courses",
-      "icon": "🥇"
+      "title": "Deans Honour List 2025",
+      "description": "Top 5% of students in the Faculty of Engineering (Mechatronics) for 2025 Semester",
+      "icon": "🎉"
     },
     {
-      "title": "Beca Build Battle Runner-Up",
-      "description": "Second place in team build competition",
-      "icon": "🥈"
+      "title": "First in Course Award",
+      "description": "Joint first in MECHENG 306, Semester 2, 2025",
+      "icon": "🏆"
     }
   ]
 }

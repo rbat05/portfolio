@@ -1,0 +1,31 @@
+{
+    "experiences": [
+        {
+            "id": "engineering-intern-1",
+            "company": "Crown RTC",
+            "role": "Engineering Intern",
+            "location": "Auckland, New Zealand",
+            "period": "Nov 2025 - Feb 2026",
+            "status": "Completed",
+            "type": "Paid, Full-time",
+            "summary": "Led FMCW radar R&D for ultra-short-range operator detection, combining hardware testing, algorithm design, and stakeholder communication to assess integration feasibility in industrial vehicles.",
+            "highlights": [
+                "Spearheaded an 11-week FMCW radar feasibility investigation for operator detection in confined industrial vehicle cabins.",
+                "Characterized three sensor architectures and validated real-world behavior against datasheets and SDK reference implementations.",
+                "Engineered a custom Python analysis pipeline to parse raw UART hexdumps and replay 3D point-cloud data for diagnostics.",
+                "Designed a three-state finite state machine and classification layer to convert noisy point clouds into occupancy outcomes.",
+                "Presented findings to 50+ stakeholders, tailoring technical depth for mentors, engineers, and executive decision-makers."
+            ],
+            "skills": [
+                "FMCW Radar R&D",
+                "Sensor Characterization",
+                "Environmental Testing",
+                "Python Data Tooling",
+                "UART/Binary Parsing",
+                "3D Point-Cloud Analysis",
+                "Finite State Machines",
+                "Stakeholder Communication"
+            ]
+        }
+    ]
+}

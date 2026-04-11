@@ -6,20 +6,22 @@
       "description": "Advanced control system for dual-axis modulation of a rocket during flight.",
       "status": "In Progress",
       "tech": [
-        "ANSYS FEA/CFD",
+        "ANSYS CFX",
         "OpenRocket",
-        "Simulink",
-        "Fusion 360"
+        "Embedded C",
+        "Fusion 360",
+        "Project Management"
       ],
       "skills1": [
         "OpenRocket",
-        "Simulink",
-        "ANSYS FEA/CFD"
+        "Embedded C",
+        "ANSYS CFX"
       ],
       "skills2": [
         "Fusion 360 CAD",
-        "3D Printing",
-        "Laser Cutting"
+        "FDM 3D Printing",
+        "Laser Cutting",
+        "Structural Design"
       ],
       "skills3": [
         "Team Leadership",
@@ -34,20 +36,20 @@
       "skills3name": "Project Management & Leadership:",
       "thumbnail": "🚀",
       "term": "June 2025 — Present",
-      "tagline": "Goal: Design a dual-axis control system enabling altitude and roll control targeting a 10,000 ft apogee with ±1% accuracy.",
-      "update": "Performed CFD using ANSYS Fluent on various configurations of the test rocket, to quantify drag forces at different velocities, air densities, and air brake deployment states (Images above of a 6 fin, 3 airbrake leaf configuration). Designed a housing for the control systems package (Pictured), to hold the avionics, reaction wheels, and airbrakes. Housing prevents shifting of the control systems package during takeoff, and provides a stable platform for the air brakes and reaction wheels to operate. Collaborating with Avionics and Recovery teams to integrate active parachute deployment system, their systems will be tested on our launch vehicle.",
-      "probandappr": "Required a precision control system for the Australian Universities Rocketry Competition 2026 rocket to actively stabilise the flight, and achieving apogee target with required accuracy. Defined a dual-axis control architecture combining airbrakes for altitude control, and reaction wheels for roll stabilisation. Conducted research into drag & roll control, rocket stability, and dynamics modelling. Initiated a test-driven development approach: designing a small-scale test rocket to validate control concepts and verify flight stability under real-world conditions. Leading a team of 3, coordinating design decisions and deliverables to ensure the team achieves the September 2025 test launch milestone. Results from the prototype will guide system refinement and parameter tuning for integration into the full-scale competition rocket.",
-      "desandimp": "Developed an OpenRocket flight simulation to model stability and aerodynamics and initiated self-learning ANSYS FEA and CFD for aerodynamic and structural validation. Designed core structural components (nose cone, tube coupler, fins, motor mount) to be manufactured using 3D printing and laser cutting, considering structural and thermal loading. Currently assembling the test rocket, transitioning from simulation to build stage.",
-      "outcomeandlearn": "Successfully initiated the test rocket build, with core components designed and prototyped. Developed skills in team leadership, project management, and cross-disciplinary integration of aerodynamics, control systems, and structural design. Gained practical experience in OpenRocket simulations and ANSYS FEA/CFD for aerospace applications.",
-      "nextsteps": "Transitioning to full physical build to validate aero-structural and stability assumptions through real-world flight data. Create a Simulink model of the test rocket to determine PID actuator gains. Conduct a live test flight, gather and analyse telemetry. Use findings to inform future design decisions, and hand-off refined designs and documentation to the 5 collaborating sub-teams as part of system integration into the full-scale rocket build.",
-      "lastUpdated": "2025-08-03",
+      "tagline": "Goal: Design a dual-axis control system enabling altitude control targeting a 10,000 ft apogee with ±1% accuracy.",
+      "update": "Completed a 330-case parametric CFD study in ANSYS CFX, characterising airbrake drag across the full deployment range and flight conditions. Airbrake geometry was parameterised analytically so models generated automatically, no manual CAD per case. Wrote Python pipelines to process raw CFD output into C header and source files containing static drag arrays and bilinear interpolation lookup functions, feeding simulation data directly into RTOS flight firmware. Designed and manufactured 8 custom 3D-printed structural components for the level 1 prototype rocket, including nose cone, electronics sled, battery capsule, and active recovery housing, all integrated successfully on first assembly. Replaced the standard motor-ejection recovery system with a custom active deployment assembly, designed to free internal volume for avionics and airbrakes. Ground test confirmed successful parachute deployment. Completed full launch vehicle integration, all subsystems (airbrakes, electronics, recovery) assembled within tolerance. Currently conducting hardware-in-the-loop testing ahead of the April 2026 test launch.",
+      "probandappr": "Rockets overshoot target altitude without active drag management after motor burnout — the brief was to design a real-time airbrake system to land precisely at 10,000 ft under competition rules. No prior club experience existed at this system complexity, requiring the team to build simulation, firmware, structural, and mechanical capabilities simultaneously from scratch. Adopted a scaled prototype strategy: validate the full control loop on a level 1 (77mm) rocket first, extract real flight data, then scale hardware and software 1.84x to the competition level 3 (141.7mm) vehicle. Divided work into four parallel tracks, mechanical design, software/firmware, simulation, and launch vehicle, with weekly cross-team syncs to manage dependencies and resolve design conflicts.",
+      "desandimp": "Split aerodynamic simulation into two tracks: OpenRocket for full-rocket body drag (no CFD required) and ANSYS CFX for airbrake-specific drag on a parameterised 120° radial slice. Ran 330 parametric CFD simulations automatically by relating airbrake deployment area to a single ANSYS parameter, enabling model generation and batch execution without manual CAD work per case. Wrote Python to ingest raw CSV output and auto-generate C header and source files containing static drag arrays and bilinear interpolation lookup functions for direct use in RTOS flight firmware. Iterated launch vehicle geometry in OpenRocket across tube lengths, nose cone profiles, fin shapes, and subsystem mass positions, translating the final configuration into Fusion 360 for manufacture. Designed and 3D-printed 8 structural parts: hollow nose cone, electronics sled, battery capsule, and active recovery deployment housing; laser-cut balsa fins to OpenRocket-derived geometry. Replaced motor-ejection recovery with a custom active deployment system to free internal volume for avionics, then designed structural housing, assembled the system, and verified deployment via ground test. Placed airbrakes at the predicted centre of mass to minimise deployment moment arm and reduce tumble risk; designed a two-screw interface for secure, removable field attachment.",
+      "outcomeandlearn": "All 8 structural components assembled to tolerance on first full integration, launch vehicle, airbrakes module, and electronics fit without rework. Active parachute deployment system verified functional via ground test prior to flight integration. CFD-derived drag lookup tables are running live in RTOS firmware, ready for closed-loop control validation in flight. Key learning 1: parametric simulation compresses design exploration dramatically, 330 cases would have taken weeks of manual CAD without the parameterisation workflow. Key learning 2: the scaled prototype strategy surfaced integration issues when changes were still cheap to make, rather than during competition build. Key learning 3: owning both simulation and structure required understanding how aerodynamic, mass, and software constraints interact which accelerating decision-making across disciplines.",
+      "nextsteps": "Complete hardware-in-the-loop testing of the full control loop on the level 1 prototype rocket. Conduct first live launch and recover onboard datalogger data. Compare measured drag against CFD predictions and recalibrate the simulation model to close the loop between prediction and physical reality. Compile a cross-subsystem improvement list from flight results, then begin scaling the validated system to the level 3 competition rocket. Lead team integration of the competition vehicle and prepare for AURC launch.",
+      "lastUpdated": "12 Apr 2026",
       "images": [
         "/images/rocket/render.png",
-        "/images/rocket/package.png",
-        "/images/rocket/fluent.png",
+        "/images/rocket/model_combined.png",
+        "/images/rocket/physical.jpg",
         "/images/rocket/steamline.png",
-        "/images/rocket/contour.png",
-        "/images/rocket/vector.png"
+        "/images/rocket/cfd_mosaic.png",
+        "/images/rocket/design_rec.png"
       ]
     },
     {
@@ -84,7 +86,7 @@
       "thumbnail": "🌦️",
       "term": "Dec 2024 — Present",
       "tagline": "Goal: Design a self-sustaining, off-grid weather station for real-time data logging and visualisation.",
-      "update": "3D printed the first prototype of the internal node enclosure, is a tight fit for the components, but successfully houses the electronics, need to make appropriate adjustments for final print. Starting design of the external node enclosure, to house the solar panel, battery, and electronics. Added a system architecture diagram to the project page, to clarify the dual-node architecture and data flow.",
+      "update": "3D printed the first prototype of the internal node enclosure, is a tight fit for the components, but successfully houses the electronics, need to make appropriate adjustments for final print. Starting design of the external node enclosure, to house the solar panel, battery, and electronics. Added a system architecture diagram to the project page, to clarify the dual-node architecture and data flow. Upskilling in PCB design with KiCad, to design a custom PCB for both node to replace the current breadboard prototype and improve reliability.",
       "probandappr": "Needed a reliable, self-sustaining weather station capable of real-time monitoring without dependence on mains power or internet connectivity. Designed a modular dual-node system that wirelessly communicates over the ESPNOW protocol to display real-time data and host a web server, based on the Arduino C framework. Prioritised power optimisation by leveraging solar charging, battery management and low-power firmware design. Focused on local data logging and accessible remote data visualisation.",
       "desandimp": "Developed 2 hardware nodes: Solar-powered ESP32-based sensor hub, ESP8266-based display unit and web server. Implemented robust data collection using BME280 (environmental data) and DS3231 (RTC), with multi-sample averaging for noise reduction. Utilised ESPNOW protocol for efficient wireless data transmission between nodes. Deployed dual data visualisation through a webpage and OLED dashboard for real-time and historical data visualisation, with all data logged to SD cards on both nodes. Engineered fault-tolerant design through sampling, averaging, watchdog timers, and autonomous rebooting logic.",
       "outcomeandlearn": "Delivered a fully functional, solar-powered weather station capable of week-long autonomous operation on battery power alone. Gained hands-on experience in low-power embedded design, wireless protocols, and hardware-software end-to-end integration. Developed practical skills in enclosure design, PCB prototyping, and firmware development.",
@@ -98,7 +100,7 @@
         "/images/weather/Webserver.png",
         "/images/weather/System_Architecture.png"
       ],
-      "lastUpdated": "2025-08-03"
+      "lastUpdated": "12 Apr 2026"
     },
     {
       "id": "gameboy",
@@ -143,7 +145,7 @@
         "/images/gameboy/Exploded.png",
         "/images/gameboy/SEGA.gif"
       ],
-      "lastUpdated": "2025-07-19"
+      "lastUpdated": "19 Oct 2025"
     },
     {
       "id": "daldy",
@@ -184,7 +186,7 @@
         "/images/daldy/Picture3.png",
         "/images/daldy/Picture4.png"
       ],
-      "lastUpdated": "2025-07-19"
+      "lastUpdated": "19 Oct 2025"
     }
   ]
 }

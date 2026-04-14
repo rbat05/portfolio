@@ -93,7 +93,7 @@
       "nextsteps": "Implement weather-proofing techniques for outdoor electronics. Finalise and 3D print enclosure designs for both nodes. Implement wind speed and direction modules, for expanded functionality.",
       "github": "https://github.com/rbat05/SolarWeatherStation",
       "images": [
-        "/images/weather/PowerSystem.jpg",
+        "/images/weather/pcb_v2.png",
         "/images/weather/ExternalNodePowered.jpg",
         "/images/weather/FullSystemAnnotated.jpg",
         "/images/weather/InternalUnitEnclosure.jpg",

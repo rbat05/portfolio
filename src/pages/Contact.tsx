@@ -6,8 +6,8 @@ const Contact = () => {
     {
       name: '[EMAIL]',
       icon: '📧',
-      url: 'mailto:raaghav.batra@email.com',
-      handle: 'raaghav.batra@email.com'
+      url: 'mailto:hello@raaghavbatra.com',
+      handle: 'hello@raaghavbatra.com'
     },
     {
       name: '[LINKEDIN]',

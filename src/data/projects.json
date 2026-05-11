@@ -55,52 +55,53 @@
     {
       "id": "weather",
       "title": "Off-Grid Solar Weather Station",
-      "description": "Self-sustaining weather monitoring system with dual-node architecture.",
-      "status": "In Progress",
+      "description": "An end-to-end, off-grid IoT environmental telemetry system featuring custom hardware, low-power RF bridging, and a retro LCD-themed web dashboard.",
+      "status": "Complete",
       "tech": [
-        "ESP32/8266",
-        "Web Deployment",
-        "Data Visualization",
-        "Electronics"
+        "C/C++ (Embedded)",
+        "Python & Flask",
+        "JavaScript/HTML",
+        "PCB Design"
       ],
       "skills1": [
-        "ESP32/8266",
-        "Arduino Framework"
+        "ESP32 & ESP8266",
+        "PlatformIO",
+        "Python/Flask",
+        "Cloudflare Pages"
       ],
       "skills2": [
-        "ESPNOW",
-        "ESPAsyncWebServer",
-        "Sensor Instrumentation",
-        "Data Logging",
-        "Data Visualization"
+        "ESP-NOW Protocol",
+        "SQLite & REST APIs",
+        "Chart.js Visualization",
+        "Deep-Sleep Optimization",
+        "Fault-Tolerant System Design"
       ],
       "skills3": [
         "Fusion 360 CAD",
-        "3D Printing",
-        "EasyEDA PCB Prototyping",
-        "Soldering"
+        "FDM 3D Printing (Stevenson Screen)",
+        "Custom PCB Routing",
+        "Power Budgeting & SMD Soldering"
       ],
       "skills1name": "Platforms:",
       "skills2name": "Technologies:",
       "skills3name": "Design & Manufacturing:",
       "thumbnail": "🌦️",
-      "term": "Dec 2024 — Present",
-      "tagline": "Goal: Design a self-sustaining, off-grid weather station for real-time data logging and visualisation.",
-      "update": "3D printed the first prototype of the internal node enclosure, is a tight fit for the components, but successfully houses the electronics, need to make appropriate adjustments for final print. Starting design of the external node enclosure, to house the solar panel, battery, and electronics. Added a system architecture diagram to the project page, to clarify the dual-node architecture and data flow. Upskilling in PCB design with KiCad, to design a custom PCB for both node to replace the current breadboard prototype and improve reliability.",
-      "probandappr": "Needed a reliable, self-sustaining weather station capable of real-time monitoring without dependence on mains power or internet connectivity. Designed a modular dual-node system that wirelessly communicates over the ESPNOW protocol to display real-time data and host a web server, based on the Arduino C framework. Prioritised power optimisation by leveraging solar charging, battery management and low-power firmware design. Focused on local data logging and accessible remote data visualisation.",
-      "desandimp": "Developed 2 hardware nodes: Solar-powered ESP32-based sensor hub, ESP8266-based display unit and web server. Implemented robust data collection using BME280 (environmental data) and DS3231 (RTC), with multi-sample averaging for noise reduction. Utilised ESPNOW protocol for efficient wireless data transmission between nodes. Deployed dual data visualisation through a webpage and OLED dashboard for real-time and historical data visualisation, with all data logged to SD cards on both nodes. Engineered fault-tolerant design through sampling, averaging, watchdog timers, and autonomous rebooting logic.",
-      "outcomeandlearn": "Delivered a fully functional, solar-powered weather station capable of week-long autonomous operation on battery power alone. Gained hands-on experience in low-power embedded design, wireless protocols, and hardware-software end-to-end integration. Developed practical skills in enclosure design, PCB prototyping, and firmware development.",
-      "nextsteps": "Implement weather-proofing techniques for outdoor electronics. Finalise and 3D print enclosure designs for both nodes. Implement wind speed and direction modules, for expanded functionality.",
+      "term": "Dec 2024 — May 2026",
+      "tagline": "Goal: Design a fault-tolerant, self-sustaining micro-climate telemetry network with a bespoke retro web dashboard.",
+      "update": "Successfully transitioned from breadboards to a custom-routed PCB. Modeled and 3D-printed a multi-louvered Stevenson Screen for accurate thermal isolation. Deployed the frontend as a static demo on Cloudflare Pages and architected a full Python Flask API with SQLite for robust data ingestion, auto-archiving, and regional comparisons using the Open-Meteo API.",
+      "probandappr": "The core problem was building a completely off-grid micro-climate monitor that wouldn't rapidly drain its battery attempting to negotiate high-power WiFi handshakes, while also avoiding the 'greenhouse effect' that skews temperature readings in off-the-shelf enclosures. My approach was to design a decoupled three-tier architecture: a solar-powered ESP32 edge node utilizing the ultra-low-latency ESP-NOW radio protocol, an always-on indoor ESP8266 network bridge, and a local Python Flask API for long-term ingestion. I prioritized absolute power efficiency at the hardware level by underclocking the MCU and modeling a bespoke 3D-printed Stevenson screen for thermodynamic isolation.",
+      "desandimp": "I engineered custom-routed PCBs to eliminate fragile breadboard wires, running an aggressively optimized bare-metal C++ firmware that executes complete wake-read-transmit-sleep cycles in under 8.0 seconds. To guarantee zero data loss during network dropouts, I built multi-layered failsafes: local SPI SD card logging, volatile RTC memory buffering on the edge node, and an asynchronous 100-packet backfill queue on the indoor relay. On the backend, I architected a dual-database SQLite system with automated CSV archival pipelines, serving data to a bespoke 'Retro Commercial LCD' web dashboard. The frontend leverages modern ES6 JavaScript and heavily customized Chart.js to dynamically plot local telemetry against live regional APIs.",
+      "outcomeandlearn": "The outcome is a highly resilient, 'deploy-and-forget' IoT ecosystem capable of running indefinitely on solar power alone, continuously logging micro-climate telemetry with zero reliance on paid cloud subscriptions. Through this project, I successfully transitioned from purely embedded microcontroller programming into true full-stack systems engineering. I gained deep practical experience bridging mechanical, electrical, and software domains—from routing custom schematics and dialing in FDM 3D-printing tolerances, to architecting secure REST APIs, managing relational databases, and mastering state-driven web visualization.",
+      "nextsteps": "Next steps involve expanding the remote hardware suite by designing and integrating a custom anemometer for wind speed and direction telemetry. Furthermore, I plan to leverage the rapidly growing local SQLite dataset to train machine learning models, aiming to accurately predict hyper-local frost events and sudden rain squalls hours before they register on broader regional metropolitan forecasts.",
+      "demoPage": "https://static-weather-showcase.raaghav-batra.workers.dev/",
       "github": "https://github.com/rbat05/SolarWeatherStation",
       "images": [
-        "/images/weather/pcb_v3.png",
-        "/images/weather/ExternalNodePowered.jpg",
-        "/images/weather/FullSystemAnnotated.jpg",
-        "/images/weather/InternalUnitEnclosure.jpg",
-        "/images/weather/Webserver.png",
-        "/images/weather/System_Architecture.png"
+        "/images/weather/exterior.png",
+        "/images/weather/interior.jpg",
+        "/images/weather/dashboard.png",
+        "/images/weather/diagram.png"
       ],
-      "lastUpdated": "12 Apr 2026"
+      "lastUpdated": "10 May 2026"
     },
     {
       "id": "gameboy",

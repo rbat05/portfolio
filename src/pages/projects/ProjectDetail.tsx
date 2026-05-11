@@ -1,5 +1,5 @@
 import { useParams, Link } from 'react-router-dom';
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Terminal from '../../components/Terminal';
 import projectsData from '../../data/projects.json';
 import TerminalText from '../../components/TerminalText';
@@ -31,6 +31,7 @@ const ProjectDetail = () => {
 
   const statusColor = project.status === 'Complete' ? 'text-green-400' : 'text-yellow-400';
   const statusIcon = project.status === 'Complete' ? '✅' : '⏳';
+  const showWeatherDemoButton = project.id === 'weather' && !!project.demoPage;
 
   // Modal state for enlarged image
   const [modalOpen, setModalOpen] = useState(false);
@@ -79,8 +80,21 @@ const ProjectDetail = () => {
           </div>
         </div>
 
-        {project.update && project.lastUpdated && (
-          <UpdatesSection updates={project.update} lastUpdated={project.lastUpdated} />
+        {showWeatherDemoButton ? (
+          <div className="mb-8 text-center">
+            <a
+              href={project.demoPage}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block px-4 py-2 font-mono text-sm border-1 transition-all duration-200 wireframe-button flashing-hover text-white border-white hover:bg-white hover:text-black"
+            >
+              Open Live Demo ↗
+            </a>
+          </div>
+        ) : (
+          project.update && project.lastUpdated && (
+            <UpdatesSection updates={project.update} lastUpdated={project.lastUpdated} />
+          )
         )}
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -268,7 +282,7 @@ const ProjectDetail = () => {
             {/* QUICK_LINKS now comes after SKILLS_USED */}
             <Terminal title="QUICK_LINKS">
               <div className="space-y-3">
-                {project.github || project.demo ? (
+                {project.github || project.demo || project.demoPage ? (
                   <>
                     {project.github && (
                       <a
@@ -288,6 +302,16 @@ const ProjectDetail = () => {
                         className="block p-3 border-2 border-white hover:bg-white hover:text-black transition-all duration-200 font-mono text-sm"
                       >
                         🎬 Live Video Demo
+                      </a>
+                    )}
+                    {project.demoPage && (
+                      <a
+                        href={project.demoPage}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="block p-3 border-2 border-white hover:bg-white hover:text-black transition-all duration-200 font-mono text-sm"
+                      >
+                        🌐 Live Web Demo
                       </a>
                     )}
                   </>

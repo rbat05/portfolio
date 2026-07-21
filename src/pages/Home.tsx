@@ -104,7 +104,7 @@ Try [EDUCATION], [EXPERIENCE], [PROJECTS] or [CONTACT]!`;
               <Terminal title="QUICK_ACCESS">
                 <div className="space-y-2 sm:space-y-3">
                   <Link to="./education" className="text-xs sm:text-sm block hover:underline">
-                    <span className="text-white">📚 Education:</span> 8.125 GPA
+                    <span className="text-white">📚 Education:</span> 8.00 GPA
                   </Link>
                   <Link to="/projects" className="text-xs sm:text-sm block hover:underline">
                     <span className="text-white">🚀 Projects:</span> 4

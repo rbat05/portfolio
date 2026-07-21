@@ -3,8 +3,12 @@
   "degree": "Bachelor of Engineering (Honours) — Final Year ",
   "spec": "Mechatronics Engineering",
   "graduationcoursecomplete": "May 2027 / Nov 2026",
-  "gpa": "8.125",
+  "gpa": "8.00",
   "semesterGPA": [
+    {
+      "semester": "2026 Semester 1",
+      "gpa": "7.00"
+    },
     {
       "semester": "2025 Semester 2",
       "gpa": "8.75"
@@ -32,11 +36,23 @@
   ],
   "currentCourses": [
     "Research Project in Mechatronics Engineering",
-    "Mechatronics Signal Processing & Control",
-    "Mechatronics Design Projects",
-    "Mobile Autonomous Robotics"
+    "Aerospace Structures & Mechanism",
+    "Systems Thinking",
+    "Industry 4.0 Smart Manufacturing"
   ],
   "pastCourses": [
+    {
+      "name": "Mechatronics Signal Processing & Control",
+      "grade": "A"
+    },
+    {
+      "name": "Mechatronics Design Projects",
+      "grade": "A"
+    },
+    {
+      "name": "Mobile Autonomous Robotics",
+      "grade": "B"
+    },
     {
       "name": "Mathematical Modelling III",
       "grade": "A+"
@@ -137,12 +153,12 @@
   "achievements": [
     {
       "title": "Academic Excellence",
-      "description": "Maintained an overall GPA of 8.125 (A grade)",
+      "description": "Maintained an overall GPA of 8.00 (A grade)",
       "icon": "⭐"
     },
     {
       "title": "Deans Honour List 2025",
-      "description": "Top 5% of students in the Faculty of Engineering (Mechatronics) for 2025 Semester",
+      "description": "Top 5% of students in the Faculty of Engineering (Mechatronics) for 2025 Year",
       "icon": "🎉"
     },
     {
